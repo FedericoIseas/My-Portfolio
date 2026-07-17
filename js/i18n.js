@@ -1,0 +1,614 @@
+/* ============================================================
+   i18n.js — Internationalisation & Content Data
+   ============================================================
+   All translatable text and content data (projects, experience,
+   skills, courses, etc.) lives here so it can be edited in one
+   place without touching the HTML.
+   ============================================================ */
+
+const translations = {
+
+  /* =========================================================
+     ESPAÑOL (default)
+     ========================================================= */
+  es: {
+    // ---- Navbar ----
+    'nav.home': 'Inicio',
+    'nav.projects': 'Proyectos',
+    'nav.experience': 'Experiencia',
+    'nav.skills': 'Skills',
+    'nav.formation': 'Formación',
+    'nav.contact': 'Contacto',
+    'nav.cv': 'Descargar CV',
+    'nav.lang': 'EN',
+
+    // ---- Hero ----
+    'hero.subtitle': 'De la infraestructura crítica al desarrollo backend',
+    'hero.description': 'Trabajo en infraestructura de seguridad crítica para el Estado argentino y desarrollo software por cuenta propia. Busco dar el salto formal a un rol de desarrollo backend, mientras avanzo en la Licenciatura en Informática.',
+    'hero.cta.projects': 'Ver proyectos',
+    'hero.cta.cv': 'Descargar CV',
+    'hero.progress.total': 'Licenciatura en Informática',
+    'hero.progress.inter': 'Título Intermedio (Analista)',
+
+    // ---- Section titles ----
+    'section.projects.title': 'Proyectos',
+    'section.projects.subtitle': 'Soluciones que diseñé y construí de punta a punta',
+    'section.experience.title': 'Experiencia',
+    'section.experience.subtitle': 'Trayectoria profesional en tecnología e infraestructura crítica',
+    'section.skills.title': 'Skills',
+    'section.skills.subtitle': 'Tecnologías y herramientas con las que trabajo',
+    'section.formation.title': 'Formación',
+    'section.formation.subtitle': 'Educación, certificaciones e idiomas',
+    'section.contact.title': '¿Hablamos?',
+    'section.contact.subtitle': 'Estoy abierto a nuevas oportunidades y colaboraciones. No dudes en contactarme.',
+
+    // ---- Formation sub-headings ----
+    'formation.education': 'Educación',
+    'formation.courses': 'Cursos y Certificaciones',
+    'formation.languages': 'Idiomas',
+
+    // ---- Projects ----
+    'projects.featured': 'Proyecto destacado',
+    'projects.details.toggle': 'Ver arquitectura',
+    'projects.details.toggle.open': 'Ocultar detalles',
+    'projects.link.demo': 'Ir al sitio',
+    'projects.link.repo': 'Repositorio',
+
+    // ---- Experience ----
+    'experience.present': 'Presente',
+    'experience.highlight': 'Proyecto destacado',
+
+    // ---- Skills categories ----
+    'skills.dev': 'Desarrollo',
+    'skills.infra': 'Infraestructura y Herramientas',
+
+    // ---- Education ----
+    'education.degree': 'Licenciatura en Informática',
+    'education.school': 'Universidad Siglo 21',
+    'education.status': 'EN CURSO',
+    'education.detail.btn': 'Ver materias cursadas',
+
+    // ---- Courses ----
+    'courses.cert': 'Ver certificado',
+
+    // ---- Languages section ----
+    'lang.es.name': 'Español',
+    'lang.es.level': 'Nativo',
+    'lang.en.name': 'Inglés',
+    'lang.en.reading': 'Lectura y comprensión: Técnico avanzado',
+    'lang.en.speaking': 'Habla: Básico',
+
+    // ---- Contact ----
+    'contact.heading': '¿Hablamos?',
+    'contact.text': 'Estoy abierto a nuevas oportunidades y colaboraciones. Si tenés un proyecto interesante o una posición en la que encaje mi perfil, no dudes en contactarme.',
+    'contact.form.name': 'Nombre',
+    'contact.form.email': 'Email',
+    'contact.form.message': 'Mensaje',
+    'contact.form.submit': 'Enviar mensaje',
+    'contact.form.name.placeholder': 'Tu nombre',
+    'contact.form.email.placeholder': 'tu@email.com',
+    'contact.form.message.placeholder': 'Contame sobre tu proyecto o propuesta...',
+
+    // ---- Footer ----
+    'footer.copy': '© {year} Federico Iseas. Todos los derechos reservados.',
+
+    // ---- Educacion page ----
+    'edu.back': 'Volver al inicio',
+    'edu.title': 'Plan de Estudios',
+    'edu.subtitle': 'Licenciatura en Informática — Universidad Siglo 21',
+    'edu.stats.title.total': 'Licenciatura en Informática',
+    'edu.stats.title.inter': 'Analista Universitario en Sistemas de Computación',
+    'edu.stats.approved': 'materias aprobadas',
+    'edu.stats.of': 'de',
+    'edu.status.approved': 'Aprobada',
+    'edu.status.in_progress': 'Cursando',
+    'edu.status.pending': 'Pendiente',
+    'edu.type.promotion': 'Promocionada',
+    'edu.type.final': 'Con final',
+    'edu.type.equivalency': 'Por equivalencia',
+
+    // ============================================================
+    // DATA: Projects
+    // ============================================================
+    projects: [
+      {
+        id: 'signumid',
+        title: 'SignumID (signumID.com.ar)',
+        featured: true,
+        image: 'resources/img/preview-SignumID.webp',
+        description: 'Plataforma para firma y validación de documentos digitales, con soporte para los estándares eIDAS y la Ley 25.506 argentina. Permite firmar PDFs, XML y documentos Office usando tokens criptográficos USB desde el navegador, y validar la legalidad de firmas existentes (CAdES, PAdES, XAdES, OOXML) verificando cadena de certificación, revocación OCSP/CRL y sellos de tiempo.',
+        stack: ['React', 'Node.js', 'Express', 'SQLite', 'pkijs', 'Docker', 'Vercel'],
+        highlights: [
+          'Arquitectura de 3 capas: SPA React + Backend Node.js/Express + Agente local para acceso a hardware criptográfico (token USB vía PowerShell/Certificate Store de Windows).',
+          'Backend con Express 5, SQLite (better-sqlite3), y librerías criptográficas de bajo nivel (pkijs, asn1js, xadesjs) para parseo y verificación de firmas digitales.',
+          'Validación multi-formato con patrón Strategy (un validador especializado por estándar: CAdES/PAdES/XAdES/OOXML) orquestados por un servicio central.',
+          'Integración con servicios externos: TSA (sellos de tiempo RFC 3161), OCSP/CRL para revocación, y descarga/parseo de TSLs (Trust Service Lists) de 5 países de Latinoamérica.',
+          'Seguridad: rate limiting, Helmet, whitelist de dominios, procesamiento de archivos en memoria (sin almacenamiento persistente de documentos).',
+        ],
+        links: {
+          demo: 'https://signumid.com.ar'
+        }
+      },
+      {
+        id: 'cuit-generator',
+        title: 'Generador de CUITs',
+        featured: false,
+        image: 'resources/img/preview-CuitGenerator.webp',
+        description: 'Herramienta web para generación y validación de CUITs/CUILs argentinos. Implementa el algoritmo oficial de cálculo del dígito verificador con soporte para personas físicas y jurídicas, ideal para pruebas en sistemas de facturación y administración tributaria.',
+        stack: ['JavaScript', 'HTML', 'CSS'],
+        highlights: [],
+        links: {
+          demo: 'https://federicoiseas.github.io/CUITGenerator/',
+          repo: 'https://github.com/FedericoIseas/CUITGenerator'
+        }
+      },
+      {
+        id: 'bot-facturador',
+        title: 'Bot Facturador',
+        featured: false,
+        image: 'resources/img/preview-BotFacturador.webp',
+        description: 'Bot de Telegram para generación automatizada de facturas electrónicas. Integra con los Web Services de AFIP (WSFE) para emisión de comprobantes fiscales válidos, simplificando la facturación para monotributistas y pequeñas empresas.',
+        stack: ['Node.js', 'Telegram (bot)', 'API REST (AFIP SDK)'],
+        highlights: [],
+        links: {
+          repo: 'https://github.com/FedericoIseas/Facturador-ARCA-DEMO'
+        }
+      },
+      {
+        id: 'gestor-equipos',
+        title: 'Gestor de Equipos',
+        featured: false,
+        image: 'resources/img/preview-gestionAPP.webp',
+        description: 'Aplicación web para la gestión interna de equipos de trabajo y asignación de tareas. Permite coordinar miembros, programar entregas y visualizar el estado de proyectos colaborativos en tiempo real.',
+        stack: ['Node.js', 'Express', 'SQLite', 'HTML/CSS'],
+        highlights: [],
+        links: {
+          repo: 'https://github.com/FedericoIseas/GestionAPP-DEMO'
+        }
+      }
+    ],
+
+    // ============================================================
+    // DATA: Experience
+    // ============================================================
+    experience: [
+      {
+        title: 'Coordinador de Firma Digital',
+        company: 'Secretaría de Innovación, Ciencia y Tecnología de la Nación',
+        period: 'Sept 2025',
+        periodEnd: 'present',
+        location: 'CABA',
+        current: true,
+        bullets: [
+          'Liderazgo técnico y operativo de equipo multidisciplinario de +15 personas, coordinando desarrollo, infraestructura y soporte de la PKI nacional.',
+          'Referente técnico principal (soporte N3) de la infraestructura de clave pública: troubleshooting de bajo nivel en sistemas de certificación y criptografía.',
+          'Gestión de proyectos de infraestructura de certificación digital, definición de roadmap técnico y priorización de mejoras.',
+        ],
+        highlight: 'Migración de HSM — Liderazgo técnico de la migración de 4 equipos HSM en producción (AC ONTI).'
+      },
+      {
+        title: 'Soporte Técnico y Administrador de AC',
+        company: 'Secretaría de Innovación, Ciencia y Tecnología de la Nación',
+        period: 'Sept 2022',
+        periodEnd: 'Ago 2025',
+        location: 'CABA',
+        current: false,
+        bullets: [
+          'Administración y mantenimiento de la Autoridad Certificante ONTI (Windows Server, HSM), garantizando disponibilidad de la infraestructura crítica.',
+          'Diseño y ejecución de consultas SQL Server complejas para auditoría y automatización de reportes periódicos.',
+          'Referente técnico N3: resolución de +1.000 incidentes anuales, debugging de integraciones y problemas de certificación.',
+          'Capacitador oficial en Firma Digital para organismos de la Administración Pública Nacional.',
+        ],
+        highlight: 'TSL Argentina (estándar ETSI TS 119 612) · Validador de Firmas (validadordefirmas.gob.ar — +2M usuarios en 2025).'
+      },
+      {
+        title: 'Oficial de Registro y Asistente Técnico',
+        company: 'Secretaría de Innovación, Ciencia y Tecnología de la Nación',
+        period: 'Sept 2021',
+        periodEnd: 'Oct 2022',
+        location: 'CABA',
+        current: false,
+        bullets: [
+          'Gestión técnica del ciclo de vida de certificados digitales: emisión, renovación, revocación.',
+          'Soporte N1 a suscriptores de la AC ONTI, con resolución de +200 incidentes anuales.',
+        ],
+        highlight: ''
+      },
+      {
+        title: 'Atención al Público',
+        company: 'Varias empresas',
+        period: 'Ene 2016',
+        periodEnd: 'Ago 2021',
+        location: 'Chascomús / La Plata',
+        current: false,
+        bullets: [
+          'Atención al cliente, gestión de pedidos y trabajo en equipo en entornos de alto volumen.',
+        ],
+        highlight: ''
+      }
+    ],
+
+    // ============================================================
+    // DATA: Skills
+    // ============================================================
+    skills: [
+      {
+        category: 'skills.dev',
+        icon: 'code',
+        items: ['HTML/CSS', 'JavaScript', 'Node.js', 'Git/GitHub', 'MongoDB', 'SQLite', 'Python', "Flask", 'Express', 'API REST']
+      },
+      {
+        category: 'skills.infra',
+        icon: 'dns',
+        items: ['JIRA Service Desk', 'Dispositivos criptográficos (HSM, USB tokens)', 'Windows Server', 'SQL Server', 'Administración de servidores',]
+      }
+    ],
+
+    // ============================================================
+    // DATA: Courses
+    // ============================================================
+    courses: [
+      {
+        title: 'Luna Network HSM 7 Certification Course',
+        provider: 'Complus SA (Partner oficial Thales)',
+        year: '2025',
+        certLink: ''
+      },
+      {
+        title: 'Inteligencia Artificial: herramientas para potenciar nuestro trabajo',
+        provider: 'Aioxnis',
+        year: '2025',
+        certLink: 'resources/docs/certificaciones/IA-herramientas-para-potenciar-nuestro-trabajo(2025).pdf'
+      }
+    ],
+
+    // ============================================================
+    // DATA: Subjects (Education page)
+    // ============================================================
+    // Removed subjects array, now loaded from materias.js
+    subjects: []
+  },
+
+  /* =========================================================
+     ENGLISH
+     ========================================================= */
+  en: {
+    // ---- Navbar ----
+    'nav.home': 'Home',
+    'nav.projects': 'Projects',
+    'nav.experience': 'Experience',
+    'nav.skills': 'Skills',
+    'nav.formation': 'Background',
+    'nav.contact': 'Contact',
+    'nav.cv': 'Download CV',
+    'nav.lang': 'ES',
+
+    // ---- Hero ----
+    'hero.subtitle': 'From critical infrastructure to backend development',
+    'hero.description': 'I work in critical security infrastructure for the Argentine government and develop software independently. I am looking to make the formal leap to a backend development role while pursuing my Bachelor\'s in Computer Science.',
+    'hero.cta.projects': 'View projects',
+    'hero.cta.cv': 'Download CV',
+    'hero.progress.total': "Bachelor's in Computer Science",
+    'hero.progress.inter': "Associate's Degree (Systems Analysis)",
+
+    // ---- Section titles ----
+    'section.projects.title': 'Projects',
+    'section.projects.subtitle': 'Solutions I designed and built end to end',
+    'section.experience.title': 'Experience',
+    'section.experience.subtitle': 'Professional background in technology and critical infrastructure',
+    'section.skills.title': 'Skills',
+    'section.skills.subtitle': 'Technologies and tools I work with',
+    'section.formation.title': 'Background',
+    'section.formation.subtitle': 'Education, certifications & languages',
+    'section.contact.title': "Let's talk",
+    'section.contact.subtitle': "I'm open to new opportunities and collaborations. Don't hesitate to reach out.",
+
+    // ---- Formation sub-headings ----
+    'formation.education': 'Education',
+    'formation.courses': 'Courses & Certifications',
+    'formation.languages': 'Languages',
+
+    // ---- Projects ----
+    'projects.featured': 'Featured project',
+    'projects.details.toggle': 'View architecture',
+    'projects.details.toggle.open': 'Hide details',
+    'projects.link.demo': 'Visit site',
+    'projects.link.repo': 'Repository',
+
+    // ---- Experience ----
+    'experience.present': 'Present',
+    'experience.highlight': 'Highlight',
+
+    // ---- Skills categories ----
+    'skills.dev': 'Development',
+    'skills.infra': 'Infrastructure & Tools',
+
+    // ---- Education ----
+    'education.degree': "Bachelor's in Computer Science",
+    'education.school': 'Universidad Siglo 21',
+    'education.status': 'IN PROGRESS',
+    'education.detail.btn': 'View coursework',
+
+    // ---- Courses ----
+    'courses.cert': 'View certificate',
+
+    // ---- Languages section ----
+    'lang.es.name': 'Spanish',
+    'lang.es.level': 'Native',
+    'lang.en.name': 'English',
+    'lang.en.reading': 'Reading & comprehension: Advanced technical',
+    'lang.en.speaking': 'Speaking: Basic',
+
+    // ---- Contact ----
+    'contact.heading': "Let's talk",
+    'contact.text': "I'm open to new opportunities and collaborations. If you have an interesting project or a position that fits my profile, feel free to reach out.",
+    'contact.form.name': 'Name',
+    'contact.form.email': 'Email',
+    'contact.form.message': 'Message',
+    'contact.form.submit': 'Send message',
+    'contact.form.name.placeholder': 'Your name',
+    'contact.form.email.placeholder': 'your@email.com',
+    'contact.form.message.placeholder': 'Tell me about your project or proposal...',
+
+    // ---- Footer ----
+    'footer.copy': '© {year} Federico Iseas. All rights reserved.',
+
+    // ---- Education page ----
+    'edu.back': 'Back to home',
+    'edu.title': 'Curriculum Plan',
+    'edu.subtitle': "Bachelor's in Computer Science — Universidad Siglo 21",
+    'edu.stats.title.total': "Bachelor's Degree in Computer Science",
+    'edu.stats.title.inter': "Associate's Degree in Systems Analysis (Intermediate Title)",
+    'edu.stats.approved': 'subjects approved',
+    'edu.stats.of': 'of',
+    'edu.status.approved': 'Approved',
+    'edu.status.in_progress': 'In progress',
+    'edu.status.pending': 'Pending',
+    'edu.type.promotion': 'Passed by promotion',
+    'edu.type.final': 'Passed by final exam',
+    'edu.type.equivalency': 'By equivalency',
+
+    // ============================================================
+    // DATA: Projects (EN)
+    // ============================================================
+    projects: [
+      {
+        id: 'signumid',
+        title: 'SignumID (signumID.com.ar)',
+        featured: true,
+        image: 'resources/img/preview-SignumID.webp',
+        description: 'Platform for signing and validating digital documents, supporting eIDAS standards and Argentine Law 25.506. Enables signing PDFs, XML and Office documents using USB cryptographic tokens from the browser, and validates existing signatures (CAdES, PAdES, XAdES, OOXML) by verifying certification chains, OCSP/CRL revocation and timestamps.',
+        stack: ['React', 'Node.js', 'Express', 'SQLite', 'pkijs', 'Docker', 'Vercel'],
+        highlights: [
+          '3-layer architecture: React SPA + Node.js/Express Backend + Local Agent for cryptographic hardware access (USB token via PowerShell/Windows Certificate Store).',
+          'Backend with Express 5, SQLite (better-sqlite3), and low-level cryptographic libraries (pkijs, asn1js, xadesjs) for parsing and verifying digital signatures.',
+          'Multi-format validation using Strategy pattern (one specialized validator per standard: CAdES/PAdES/XAdES/OOXML) orchestrated by a central service.',
+          'Integration with external services: TSA (RFC 3161 timestamps), OCSP/CRL for revocation, and download/parsing of TSLs (Trust Service Lists) from 5 Latin American countries.',
+          'Security: rate limiting, Helmet, domain whitelist, in-memory file processing (no persistent document storage).',
+        ],
+        links: {
+          demo: 'https://signumid.com.ar'
+        }
+      },
+      {
+        id: 'cuit-generator',
+        title: 'CUIT Generator',
+        featured: false,
+        image: 'resources/img/preview-CuitGenerator.webp',
+        description: 'Web tool for generating and validating Argentine CUITs/CUILs (tax IDs). Implements the official check-digit algorithm with support for individuals and legal entities, ideal for testing billing and tax administration systems.',
+        stack: ['JavaScript', 'HTML', 'CSS'],
+        highlights: [],
+        links: {
+          demo: 'https://federicoiseas.github.io/CUITGenerator/',
+          repo: 'https://github.com/FedericoIseas/CUITGenerator'
+        }
+      },
+      {
+        id: 'bot-facturador',
+        title: 'Invoice Bot',
+        featured: false,
+        image: 'resources/img/preview-BotFacturador.webp',
+        description: 'Telegram bot for automated electronic invoice generation. Integrates with AFIP Web Services (WSFE) for issuing valid tax receipts, simplifying invoicing for freelancers and small businesses.',
+        stack: ['Node.js', 'Telegram (bot)', 'API REST (AFIP SDK)'],
+        highlights: [],
+        links: {
+          repo: 'https://github.com/FedericoIseas/Facturador-ARCA-DEMO'
+        }
+      },
+      {
+        id: 'gestor-equipos',
+        title: 'Team Manager',
+        featured: false,
+        image: 'resources/img/preview-gestionAPP.webp',
+        description: 'Web application for internal team management and task allocation. Enables coordinating members, scheduling deliverables, and visualizing collaborative project statuses in real time.',
+        stack: ['Node.js', 'Express', 'SQLite', 'HTML/CSS'],
+        highlights: [],
+        links: {
+          repo: 'https://github.com/FedericoIseas/GestionAPP-DEMO'
+        }
+      }
+    ],
+
+    // ============================================================
+    // DATA: Experience (EN)
+    // ============================================================
+    experience: [
+      {
+        title: 'Digital Signature Coordinator',
+        company: 'National Secretariat of Innovation, Science & Technology',
+        period: 'Sep 2025',
+        periodEnd: 'present',
+        location: 'Buenos Aires',
+        current: true,
+        bullets: [
+          'Technical and operational leadership of a 15+ member multidisciplinary team, coordinating development, infrastructure and support for the national PKI.',
+          'Principal technical reference (L3 support) for public key infrastructure: low-level troubleshooting of certification and cryptography systems.',
+          'Project management for digital certification infrastructure, defining technical roadmap and prioritizing improvements.',
+        ],
+        highlight: 'HSM Migration — Technical lead for the migration of 4 production HSM appliances (AC ONTI).'
+      },
+      {
+        title: 'Technical Support & CA Administrator',
+        company: 'National Secretariat of Innovation, Science & Technology',
+        period: 'Sep 2022',
+        periodEnd: 'Aug 2025',
+        location: 'Buenos Aires',
+        current: false,
+        bullets: [
+          'Administration and maintenance of the ONTI Certification Authority (Windows Server, HSM), ensuring critical infrastructure availability.',
+          'Design and execution of complex SQL Server queries for auditing and automated periodic report generation.',
+          'L3 technical reference: resolution of 1,000+ annual incidents, integration debugging and certification troubleshooting.',
+          'Official trainer on Digital Signature for National Public Administration agencies.',
+        ],
+        highlight: 'Argentine TSL (ETSI TS 119 612 standard) · Signature Validator (validadordefirmas.gob.ar — 2M+ users in 2025).'
+      },
+      {
+        title: 'Registration Officer & Technical Assistant',
+        company: 'National Secretariat of Innovation, Science & Technology',
+        period: 'Sep 2021',
+        periodEnd: 'Oct 2022',
+        location: 'Buenos Aires',
+        current: false,
+        bullets: [
+          'Technical management of digital certificate lifecycle: issuance, renewal, revocation.',
+          'L1 support for AC ONTI subscribers, resolving 200+ annual incidents.',
+        ],
+        highlight: ''
+      },
+      {
+        title: 'Customer Service',
+        company: 'Various companies',
+        period: 'Jan 2016',
+        periodEnd: 'Aug 2021',
+        location: 'Chascomús / La Plata',
+        current: false,
+        bullets: [
+          'Customer service, order management and teamwork in high-volume environments.',
+        ],
+        highlight: ''
+      }
+    ],
+
+    // ============================================================
+    // DATA: Skills (EN)
+    // ============================================================
+    skills: [
+      {
+        category: 'skills.dev',
+        icon: 'code',
+        items: ['JavaScript', 'Node.js', 'HTML/CSS', 'Git/GitHub', 'MongoDB', 'SQLite', 'Python', "Flask", 'Express', 'API REST']
+      },
+      {
+        category: 'skills.infra',
+        icon: 'dns',
+        items: ['JIRA Service Desk', 'Cryptographic devices (HSM, USB tokens)', 'Windows Server', 'SQL Server', 'Server administration',]
+      }
+    ],
+
+    // ============================================================
+    // DATA: Courses (EN)
+    // ============================================================
+    courses: [
+      {
+        title: 'Luna Network HSM 7 Certification Course',
+        provider: 'Complus SA (Official Thales Partner)',
+        year: '2025',
+        certLink: ''
+      },
+      {
+        title: 'Artificial Intelligence: tools to boost our work',
+        provider: 'Aioxnis',
+        year: '2025',
+        certLink: 'resources/docs/certificaciones/IA-herramientas-para-potenciar-nuestro-trabajo(2025).pdf'
+      }
+    ],
+
+    // Removed subjects array, now loaded from materias.js
+    subjects: []
+  }
+};
+
+/* ============================================================
+   i18n Engine
+   ============================================================ */
+
+let currentLang = 'es';
+
+/**
+ * Get a translation by key. Supports {year} interpolation.
+ * @param {string} key — dot-notation key (e.g. 'nav.home')
+ * @returns {string}
+ */
+function t(key) {
+  const val = translations[currentLang][key];
+  if (typeof val === 'string') {
+    return val.replace('{year}', new Date().getFullYear());
+  }
+  return val !== undefined ? val : key;
+}
+
+/**
+ * Get data array (projects, experience, etc.) for the current language.
+ * @param {string} key — data key (e.g. 'projects')
+ * @returns {Array}
+ */
+function getData(key) {
+  return translations[currentLang][key] || [];
+}
+
+/**
+ * Apply translations to all elements with data-i18n attribute.
+ * Also handles data-i18n-placeholder.
+ */
+function applyTranslations() {
+  document.querySelectorAll('[data-i18n]').forEach(el => {
+    const key = el.getAttribute('data-i18n');
+    const translated = t(key);
+    if (typeof translated === 'string') {
+      el.textContent = translated;
+    }
+  });
+
+  document.querySelectorAll('[data-i18n-html]').forEach(el => {
+    const key = el.getAttribute('data-i18n-html');
+    const translated = t(key);
+    if (typeof translated === 'string') {
+      el.innerHTML = translated;
+    }
+  });
+
+  document.querySelectorAll('[data-i18n-placeholder]').forEach(el => {
+    const key = el.getAttribute('data-i18n-placeholder');
+    el.placeholder = t(key);
+  });
+
+  document.querySelectorAll('[data-i18n-aria]').forEach(el => {
+    const key = el.getAttribute('data-i18n-aria');
+    el.setAttribute('aria-label', t(key));
+  });
+}
+
+/**
+ * Set language and persist to localStorage.
+ * @param {string} lang — 'es' or 'en'
+ */
+function setLanguage(lang) {
+  currentLang = lang;
+  localStorage.setItem('portfolio-lang', lang);
+  document.documentElement.setAttribute('lang', lang);
+  applyTranslations();
+
+  // Re-render dynamic sections
+  if (typeof renderDynamicSections === 'function') {
+    renderDynamicSections();
+  }
+}
+
+/**
+ * Initialize language from localStorage (default: 'es').
+ */
+function initLanguage() {
+  const saved = localStorage.getItem('portfolio-lang');
+  currentLang = saved || 'es';
+  document.documentElement.setAttribute('lang', currentLang);
+}

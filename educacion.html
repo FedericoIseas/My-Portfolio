@@ -1,0 +1,127 @@
+<!DOCTYPE html>
+<html lang="es" data-theme="light">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Plan de estudios — Federico Iseas</title>
+  <meta name="description" content="Detalle de materias cursadas de la Licenciatura en Informática — Universidad Siglo 21.">
+
+  <!-- Favicon -->
+  <link rel="icon" type="image/webp" href="resources/img/favicon.webp">
+
+  <!-- Styles -->
+  <link rel="stylesheet" href="css/styles.css">
+
+  <!-- Preconnect for Google Fonts -->
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+</head>
+<body>
+
+  <!-- ============================================================
+       NAVBAR (aligned with landing page)
+       ============================================================ -->
+  <header class="navbar" id="navbar">
+    <div class="container navbar__inner">
+
+      <!-- Logo -->
+      <a href="index.html" class="navbar__logo">Federico Iseas</a>
+
+      <!-- Desktop Nav -->
+      <nav class="navbar__nav" aria-label="Main navigation">
+        <a href="index.html#inicio" class="navbar__link" data-i18n="nav.home">Inicio</a>
+        <a href="index.html#proyectos" class="navbar__link" data-i18n="nav.projects">Proyectos</a>
+        <a href="index.html#experiencia" class="navbar__link" data-i18n="nav.experience">Experiencia</a>
+        <a href="index.html#formacion" class="navbar__link" data-i18n="nav.formation">Formación</a>
+        <a href="index.html#skills" class="navbar__link" data-i18n="nav.skills">Skills</a>
+        <a href="index.html#contacto" class="navbar__link" data-i18n="nav.contact">Contacto</a>
+      </nav>
+
+      <!-- Actions -->
+      <div class="navbar__actions">
+        <!-- Language toggle -->
+        <button class="navbar__lang-btn" id="lang-toggle" aria-label="Toggle language" data-i18n="nav.lang">EN</button>
+
+        <!-- Theme toggle -->
+        <button class="navbar__icon-btn" id="theme-toggle" aria-label="Toggle dark mode">
+          <span class="material-symbols-rounded" id="theme-icon">dark_mode</span>
+        </button>
+
+        <!-- CV Download -->
+        <a href="resources/docs/CV_Iseas_Federico.pdf" target="_blank" rel="noopener noreferrer" class="btn btn--primary btn--small navbar__cv-btn">
+          <span class="material-symbols-rounded">download</span>
+          <span data-i18n="nav.cv">Descargar CV</span>
+        </a>
+
+        <!-- Hamburger (mobile) -->
+        <button class="navbar__hamburger" id="hamburger" aria-label="Open menu">
+          <span></span>
+          <span></span>
+          <span></span>
+        </button>
+      </div>
+    </div>
+
+    <!-- Mobile Menu -->
+    <nav class="navbar__mobile-menu" id="mobile-menu" aria-label="Mobile navigation">
+      <a href="index.html#inicio" class="navbar__mobile-link" data-i18n="nav.home">Inicio</a>
+      <a href="index.html#proyectos" class="navbar__mobile-link" data-i18n="nav.projects">Proyectos</a>
+      <a href="index.html#experiencia" class="navbar__mobile-link" data-i18n="nav.experience">Experiencia</a>
+      <a href="index.html#formacion" class="navbar__mobile-link" data-i18n="nav.formation">Formación</a>
+      <a href="index.html#skills" class="navbar__mobile-link" data-i18n="nav.skills">Skills</a>
+      <a href="index.html#contacto" class="navbar__mobile-link" data-i18n="nav.contact">Contacto</a>
+
+      <div class="navbar__mobile-actions">
+        <button class="navbar__lang-btn" id="lang-toggle-mobile" aria-label="Toggle language" data-i18n="nav.lang">EN</button>
+        <button class="navbar__icon-btn" id="theme-toggle-mobile" aria-label="Toggle dark mode">
+          <span class="material-symbols-rounded">dark_mode</span>
+        </button>
+        <a href="resources/docs/CV_Iseas_Federico.pdf" target="_blank" rel="noopener noreferrer" class="btn btn--primary btn--small">
+          <span class="material-symbols-rounded">download</span>
+          <span data-i18n="nav.cv">Descargar CV</span>
+        </a>
+      </div>
+    </nav>
+  </header>
+
+  <!-- ============================================================
+       CONTENT
+       ============================================================ -->
+  <main class="section">
+    <div class="container">
+      <a href="index.html#educacion" class="edu-page__back">
+        <span class="material-symbols-rounded">arrow_back</span>
+        <span data-i18n="edu.back">Volver al inicio</span>
+      </a>
+
+      <div class="section__header">
+        <h1 class="section__title" data-i18n="edu.title">Materias Cursadas</h1>
+        <p class="section__subtitle" data-i18n="edu.subtitle">Licenciatura en Informática — Universidad Siglo 21</p>
+      </div>
+
+      <!-- Stats summary -->
+      <div id="edu-stats-wrapper" class="edu-page__stats-container reveal">
+        <!-- Rendered dynamically by main.js -->
+      </div>
+
+      <div id="subjects-container">
+        <!-- Rendered dynamically by main.js -->
+      </div>
+    </div>
+  </main>
+
+  <!-- ============================================================
+       FOOTER
+       ============================================================ -->
+  <footer class="footer">
+    <div class="container">
+      <p class="footer__text" id="footer-copy"></p>
+    </div>
+  </footer>
+
+  <!-- Scripts -->
+  <script src="js/materias.js"></script>
+  <script src="js/i18n.js"></script>
+  <script src="js/main.js"></script>
+</body>
+</html>

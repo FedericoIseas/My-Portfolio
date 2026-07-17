@@ -1,0 +1,359 @@
+<!DOCTYPE html>
+<html lang="es" data-theme="light">
+
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Federico Iseas — Desarrollador Backend</title>
+  <meta name="description"
+    content="Portfolio de Federico Iseas. Desarrollador Backend especializado en Node.js, infraestructura crítica y seguridad. Experiencia en PKI, automatización y sistemas de misión crítica.">
+  <meta name="author" content="Federico Iseas">
+  <meta name="keywords"
+    content="desarrollador backend, Node.js, Express, JavaScript, Python, Flask, PKI, firma digital, portfolio">
+
+  <!-- Open Graph -->
+  <meta property="og:title" content="Federico Iseas - Desarrollador Backend">
+  <meta property="og:description"
+    content="Desarrollador Backend con experiencia en infraestructura crítica, seguridad y firma digital o electrónica.">
+  <meta property="og:type" content="website">
+
+  <!-- Favicon -->
+  <link rel="icon" type="image/webp" href="resources/img/favicon.webp">
+
+  <!-- Styles -->
+  <link rel="stylesheet" href="css/styles.css">
+
+  <!-- Preconnect for Google Fonts -->
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+</head>
+
+<body>
+
+  <!-- ============================================================
+       NAVBAR
+       ============================================================ -->
+  <header class="navbar" id="navbar">
+    <div class="container navbar__inner">
+
+      <!-- Logo -->
+      <a href="#" class="navbar__logo">FI</a>
+
+      <!-- Desktop Nav -->
+      <nav class="navbar__nav" aria-label="Main navigation">
+        <a href="#inicio" class="navbar__link" data-i18n="nav.home">Inicio</a>
+        <a href="#proyectos" class="navbar__link" data-i18n="nav.projects">Proyectos</a>
+        <a href="#experiencia" class="navbar__link" data-i18n="nav.experience">Experiencia</a>
+        <a href="#formacion" class="navbar__link" data-i18n="nav.formation">Formación</a>
+        <a href="#skills" class="navbar__link" data-i18n="nav.skills">Skills</a>
+        <a href="#contacto" class="navbar__link" data-i18n="nav.contact">Contacto</a>
+      </nav>
+
+      <!-- Actions -->
+      <div class="navbar__actions">
+        <!-- Language toggle -->
+        <button class="navbar__lang-btn" id="lang-toggle" aria-label="Toggle language" data-i18n="nav.lang">EN</button>
+
+        <!-- Theme toggle -->
+        <button class="navbar__icon-btn" id="theme-toggle" aria-label="Toggle dark mode">
+          <span class="material-symbols-rounded" id="theme-icon">dark_mode</span>
+        </button>
+
+        <!-- CV Download (desktop) -->
+        <a href="resources/docs/CV_Iseas_Federico.pdf" target="_blank" rel="noopener noreferrer"
+          class="btn btn--primary btn--small navbar__cv-btn">
+          <span class="material-symbols-rounded">download</span>
+          <span data-i18n="nav.cv">Descargar CV</span>
+        </a>
+
+        <!-- Hamburger (mobile) -->
+        <button class="navbar__hamburger" id="hamburger" aria-label="Open menu">
+          <span></span>
+          <span></span>
+          <span></span>
+        </button>
+      </div>
+    </div>
+
+    <!-- Mobile Menu -->
+    <nav class="navbar__mobile-menu" id="mobile-menu" aria-label="Mobile navigation">
+      <a href="#inicio" class="navbar__mobile-link" data-i18n="nav.home">Inicio</a>
+      <a href="#proyectos" class="navbar__mobile-link" data-i18n="nav.projects">Proyectos</a>
+      <a href="#experiencia" class="navbar__mobile-link" data-i18n="nav.experience">Experiencia</a>
+      <a href="#formacion" class="navbar__mobile-link" data-i18n="nav.formation">Formación</a>
+      <a href="#skills" class="navbar__mobile-link" data-i18n="nav.skills">Skills</a>
+      <a href="#contacto" class="navbar__mobile-link" data-i18n="nav.contact">Contacto</a>
+
+      <div class="navbar__mobile-actions">
+        <button class="navbar__lang-btn" id="lang-toggle-mobile" aria-label="Toggle language"
+          data-i18n="nav.lang">EN</button>
+        <button class="navbar__icon-btn" id="theme-toggle-mobile" aria-label="Toggle dark mode">
+          <span class="material-symbols-rounded">dark_mode</span>
+        </button>
+        <a href="resources/docs/CV_Iseas_Federico.pdf" target="_blank" rel="noopener noreferrer"
+          class="btn btn--primary btn--small">
+          <span class="material-symbols-rounded">download</span>
+          <span data-i18n="nav.cv">Descargar CV</span>
+        </a>
+      </div>
+    </nav>
+  </header>
+
+  <!-- ============================================================
+       HERO
+       ============================================================ -->
+  <section class="hero" id="inicio">
+    <div class="container hero__inner">
+
+      <!-- Content -->
+      <div class="hero__content">
+        <h1 class="hero__name">Federico Iseas</h1>
+        <p class="hero__subtitle mono" data-i18n="hero.subtitle">De la infraestructura crítica al desarrollo backend</p>
+        <p class="hero__description" data-i18n="hero.description">
+          Trabajo en infraestructura de seguridad crítica para el Estado argentino y desarrollo software por cuenta
+          propia. Busco dar el salto formal a un rol de desarrollo backend, mientras avanzo en la Licenciatura en
+          Informática.
+        </p>
+
+        <!-- Academic Progress Bars -->
+        <div class="hero__progress-container">
+          <a href="educacion.html" class="hero__progress-item">
+            <div class="hero__progress-label">
+              <span class="hero__progress-title">
+                <span class="material-symbols-rounded">school</span>
+                <span data-i18n="hero.progress.total">Licenciatura en Informática</span>
+              </span>
+              <span class="hero__progress-val" id="hero-progress-total-val">0%</span>
+            </div>
+            <div class="hero__progress-bar-bg">
+              <div class="hero__progress-bar-fill" id="hero-progress-total-fill"></div>
+            </div>
+          </a>
+          <a href="educacion.html" class="hero__progress-item hero__progress-item--inter">
+            <div class="hero__progress-label">
+              <span class="hero__progress-title">
+                <span class="material-symbols-rounded">workspace_premium</span>
+                <span data-i18n="hero.progress.inter">Título Intermedio (Analista)</span>
+              </span>
+              <span class="hero__progress-val" id="hero-progress-inter-val">0%</span>
+            </div>
+            <div class="hero__progress-bar-bg">
+              <div class="hero__progress-bar-fill" id="hero-progress-inter-fill"></div>
+            </div>
+          </a>
+        </div>
+
+
+        <div class="hero__buttons">
+          <a href="#proyectos" class="btn btn--primary">
+            <span class="material-symbols-rounded">rocket_launch</span>
+            <span data-i18n="hero.cta.projects">Ver proyectos</span>
+          </a>
+          <a href="resources/docs/CV_Iseas_Federico.pdf" target="_blank" rel="noopener noreferrer"
+            class="btn btn--secondary">
+            <span class="material-symbols-rounded">download</span>
+            <span data-i18n="hero.cta.cv">Descargar CV</span>
+          </a>
+        </div>
+
+        <div class="hero__socials">
+          <!-- LinkedIn -->
+          <a href="https://linkedin.com/in/federico-iseas" target="_blank" rel="noopener noreferrer"
+            class="hero__social-link" aria-label="LinkedIn">
+            <svg viewBox="0 0 24 24" xmlns="http://www.w3.org/2000/svg">
+              <path
+                d="M20.447 20.452h-3.554v-5.569c0-1.328-.027-3.037-1.852-3.037-1.853 0-2.136 1.445-2.136 2.939v5.667H9.351V9h3.414v1.561h.046c.477-.9 1.637-1.85 3.37-1.85 3.601 0 4.267 2.37 4.267 5.455v6.286zM5.337 7.433a2.062 2.062 0 01-2.063-2.065 2.064 2.064 0 112.063 2.065zm1.782 13.019H3.555V9h3.564v11.452zM22.225 0H1.771C.792 0 0 .774 0 1.729v20.542C0 23.227.792 24 1.771 24h20.451C23.2 24 24 23.227 24 22.271V1.729C24 .774 23.2 0 22.222 0h.003z" />
+            </svg>
+          </a>
+          <!-- GitHub -->
+          <a href="https://github.com/federicoiseas" target="_blank" rel="noopener noreferrer" class="hero__social-link"
+            aria-label="GitHub">
+            <svg viewBox="0 0 24 24" xmlns="http://www.w3.org/2000/svg">
+              <path
+                d="M12 .297c-6.63 0-12 5.373-12 12 0 5.303 3.438 9.8 8.205 11.385.6.113.82-.258.82-.577 0-.285-.01-1.04-.015-2.04-3.338.724-4.042-1.61-4.042-1.61C4.422 18.07 3.633 17.7 3.633 17.7c-1.087-.744.084-.729.084-.729 1.205.084 1.838 1.236 1.838 1.236 1.07 1.835 2.809 1.305 3.495.998.108-.776.417-1.305.76-1.605-2.665-.3-5.466-1.332-5.466-5.93 0-1.31.465-2.38 1.235-3.22-.135-.303-.54-1.523.105-3.176 0 0 1.005-.322 3.3 1.23.96-.267 1.98-.399 3-.405 1.02.006 2.04.138 3 .405 2.28-1.552 3.285-1.23 3.285-1.23.645 1.653.24 2.873.12 3.176.765.84 1.23 1.91 1.23 3.22 0 4.61-2.805 5.625-5.475 5.92.42.36.81 1.096.81 2.22 0 1.606-.015 2.896-.015 3.286 0 .315.21.69.825.57C20.565 22.092 24 17.592 24 12.297c0-6.627-5.373-12-12-12" />
+            </svg>
+          </a>
+          <!-- Email -->
+          <a href="mailto:federicoiseas@gmail.com" class="hero__social-link" aria-label="Email">
+            <svg viewBox="0 0 24 24" xmlns="http://www.w3.org/2000/svg">
+              <path
+                d="M20 4H4c-1.1 0-1.99.9-1.99 2L2 18c0 1.1.9 2 2 2h16c1.1 0 2-.9 2-2V6c0-1.1-.9-2-2-2zm0 4l-8 5-8-5V6l8 5 8-5v2z" />
+            </svg>
+          </a>
+        </div>
+      </div>
+
+      <!-- Photo -->
+      <div class="hero__photo-wrapper">
+        <img src="resources/img/Foto.webp" alt="Federico Iseas" class="hero__photo" loading="eager">
+      </div>
+    </div>
+  </section>
+
+  <!-- ============================================================
+       PROJECTS
+       ============================================================ -->
+  <section class="section" id="proyectos">
+    <div class="container">
+      <div class="section__header reveal">
+        <h2 class="section__title" data-i18n="section.projects.title">Proyectos</h2>
+        <p class="section__subtitle" data-i18n="section.projects.subtitle">Soluciones que diseñé y construí de punta a
+          punta</p>
+      </div>
+      <div class="projects__grid" id="projects-grid">
+        <!-- Rendered dynamically by main.js -->
+      </div>
+    </div>
+  </section>
+
+  <!-- ============================================================
+       EXPERIENCE
+       ============================================================ -->
+  <section class="section" id="experiencia">
+    <div class="container">
+      <div class="section__header reveal">
+        <h2 class="section__title" data-i18n="section.experience.title">Experiencia</h2>
+        <p class="section__subtitle" data-i18n="section.experience.subtitle">Trayectoria profesional en tecnología e
+          infraestructura crítica</p>
+      </div>
+      <div class="timeline" id="experience-timeline">
+        <!-- Rendered dynamically by main.js -->
+      </div>
+    </div>
+  </section>
+
+  <!-- ============================================================
+       FORMACIÓN (Education + Courses + Languages)
+       ============================================================ -->
+  <section class="section" id="formacion">
+    <div class="container">
+      <div class="section__header reveal">
+        <h2 class="section__title" data-i18n="section.formation.title">Formación</h2>
+        <p class="section__subtitle" data-i18n="section.formation.subtitle">Educación, certificaciones e idiomas</p>
+      </div>
+
+      <div class="formation__grid">
+        <!-- Education -->
+        <div class="formation__block reveal">
+          <h3 class="formation__block-title">
+            <span class="material-symbols-rounded">school</span>
+            <span data-i18n="formation.education">Educación</span>
+          </h3>
+          <div class="education__card">
+            <div>
+              <h4 class="education__degree" data-i18n="education.degree">Licenciatura en Informática</h4>
+              <p class="education__school" data-i18n="education.school">Universidad Siglo 21</p>
+              <p class="education__status mono" data-i18n="education.status">EN CURSO</p>
+              <p class="education__progress-text mono" id="edu-percentage-main"></p>
+            </div>
+            <a href="educacion.html" class="btn btn--secondary btn--small">
+              <span class="material-symbols-rounded">menu_book</span>
+              <span data-i18n="education.detail.btn">Ver materias cursadas</span>
+            </a>
+          </div>
+        </div>
+
+        <!-- Courses -->
+        <div class="formation__block reveal reveal--delay-1">
+          <h3 class="formation__block-title">
+            <span class="material-symbols-rounded">workspace_premium</span>
+            <span data-i18n="formation.courses">Cursos y Certificaciones</span>
+          </h3>
+          <div id="courses-grid" class="courses__list">
+            <!-- Rendered dynamically by main.js -->
+          </div>
+        </div>
+
+        <!-- Languages -->
+        <div class="formation__block reveal reveal--delay-2">
+          <h3 class="formation__block-title">
+            <span class="material-symbols-rounded">translate</span>
+            <span data-i18n="formation.languages">Idiomas</span>
+          </h3>
+          <div id="languages-grid" class="languages__list">
+            <!-- Rendered dynamically by main.js -->
+          </div>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- ============================================================
+       SKILLS
+       ============================================================ -->
+  <section class="section" id="skills">
+    <div class="container">
+      <div class="section__header reveal">
+        <h2 class="section__title" data-i18n="section.skills.title">Skills</h2>
+        <p class="section__subtitle" data-i18n="section.skills.subtitle">Tecnologías y herramientas con las que trabajo
+        </p>
+      </div>
+      <div class="skills__grid" id="skills-grid">
+        <!-- Rendered dynamically by main.js -->
+      </div>
+    </div>
+  </section>
+
+  <!-- ============================================================
+       CONTACT
+       ============================================================ -->
+  <section class="section contact" id="contacto">
+    <div class="container">
+      <div class="contact__inner">
+        <div class="contact__info reveal">
+          <h2 class="contact__heading" data-i18n="contact.heading">¿Hablamos?</h2>
+          <p class="contact__text" data-i18n="contact.text">
+            Estoy abierto a nuevas oportunidades y colaboraciones. Si tenés un proyecto interesante o una posición
+            backend, no dudes en contactarme.
+          </p>
+
+          <div class="contact__cta">
+            <a href="mailto:federicoiseas@gmail.com" class="btn btn--primary btn--large contact__email-btn">
+              <span class="material-symbols-rounded">mail</span>
+              federicoiseas@gmail.com
+            </a>
+          </div>
+
+          <div class="contact__links">
+            <a href="https://linkedin.com/in/federico-iseas" target="_blank" rel="noopener noreferrer"
+              class="contact__link">
+              <svg width="20" height="20" viewBox="0 0 24 24" fill="currentColor">
+                <path
+                  d="M20.447 20.452h-3.554v-5.569c0-1.328-.027-3.037-1.852-3.037-1.853 0-2.136 1.445-2.136 2.939v5.667H9.351V9h3.414v1.561h.046c.477-.9 1.637-1.85 3.37-1.85 3.601 0 4.267 2.37 4.267 5.455v6.286zM5.337 7.433a2.062 2.062 0 01-2.063-2.065 2.064 2.064 0 112.063 2.065zm1.782 13.019H3.555V9h3.564v11.452zM22.225 0H1.771C.792 0 0 .774 0 1.729v20.542C0 23.227.792 24 1.771 24h20.451C23.2 24 24 23.227 24 22.271V1.729C24 .774 23.2 0 22.222 0h.003z" />
+              </svg>
+              LinkedIn
+            </a>
+            <a href="https://github.com/federicoiseas" target="_blank" rel="noopener noreferrer" class="contact__link">
+              <svg width="20" height="20" viewBox="0 0 24 24" fill="currentColor">
+                <path
+                  d="M12 .297c-6.63 0-12 5.373-12 12 0 5.303 3.438 9.8 8.205 11.385.6.113.82-.258.82-.577 0-.285-.01-1.04-.015-2.04-3.338.724-4.042-1.61-4.042-1.61C4.422 18.07 3.633 17.7 3.633 17.7c-1.087-.744.084-.729.084-.729 1.205.084 1.838 1.236 1.838 1.236 1.07 1.835 2.809 1.305 3.495.998.108-.776.417-1.305.76-1.605-2.665-.3-5.466-1.332-5.466-5.93 0-1.31.465-2.38 1.235-3.22-.135-.303-.54-1.523.105-3.176 0 0 1.005-.322 3.3 1.23.96-.267 1.98-.399 3-.405 1.02.006 2.04.138 3 .405 2.28-1.552 3.285-1.23 3.285-1.23.645 1.653.24 2.873.12 3.176.765.84 1.23 1.91 1.23 3.22 0 4.61-2.805 5.625-5.475 5.92.42.36.81 1.096.81 2.22 0 1.606-.015 2.896-.015 3.286 0 .315.21.69.825.57C20.565 22.092 24 17.592 24 12.297c0-6.627-5.373-12-12-12" />
+              </svg>
+              GitHub
+            </a>
+            <a href="resources/CV_Federico_Iseas.pdf" download="CV_Federico_Iseas.pdf"
+              class="contact__link contact__link--cv">
+              <span class="material-symbols-rounded">download</span>
+              <span data-i18n="nav.cv">Descargar CV</span>
+            </a>
+          </div>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- ============================================================
+       FOOTER
+       ============================================================ -->
+  <footer class="footer">
+    <div class="container">
+      <p class="footer__text" id="footer-copy"></p>
+    </div>
+  </footer>
+
+  <!-- Scripts -->
+  <script src="js/materias.js"></script>
+  <script src="js/i18n.js"></script>
+  <script src="js/main.js"></script>
+</body>
+
+</html>
