@@ -245,7 +245,7 @@ const translations = {
       {
         category: 'skills.dev',
         icon: 'code',
-        items: ['JavaScript', 'Node.js', 'HTML', 'CSS', 'Git', 'Spec Driven Development (SDD)', 'APIs REST']
+        items: ['JavaScript', 'Node.js', 'HTML', 'CSS', 'Git', 'Python', 'Flask', 'Express', 'Spec Driven Development (SDD)', 'APIs REST']
       },
       {
         category: 'skills.infra',
@@ -255,7 +255,7 @@ const translations = {
       {
         category: 'skills.db',
         icon: 'database',
-        items: ['SQL Server']
+        items: ['SQL Server', 'MongoDB']
       },
       {
         category: 'skills.mgmt',
@@ -526,7 +526,7 @@ const translations = {
       {
         category: 'skills.dev',
         icon: 'code',
-        items: ['JavaScript', 'Node.js', 'HTML', 'CSS', 'Git', 'Spec Driven Development (SDD)', 'APIs REST']
+        items: ['JavaScript', 'Node.js', 'HTML', 'CSS', 'Git', 'Python', 'Flask', 'Express', 'Spec Driven Development (SDD)', 'APIs REST']
       },
       {
         category: 'skills.infra',
@@ -536,7 +536,7 @@ const translations = {
       {
         category: 'skills.db',
         icon: 'database',
-        items: ['SQL Server']
+        items: ['SQL Server', 'MongoDB']
       },
       {
         category: 'skills.mgmt',
