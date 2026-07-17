@@ -60,7 +60,9 @@ const translations = {
 
     // ---- Skills categories ----
     'skills.dev': 'Desarrollo',
-    'skills.infra': 'Infraestructura y Herramientas',
+    'skills.infra': 'Infraestructura y seguridad',
+    'skills.db': 'Bases de datos',
+    'skills.mgmt': 'Gestión',
 
     // ---- Education ----
     'education.degree': 'Licenciatura en Informática',
@@ -167,7 +169,6 @@ const translations = {
         }
       }
     ],
-
     // ============================================================
     // DATA: Experience
     // ============================================================
@@ -180,24 +181,32 @@ const translations = {
         location: 'CABA',
         current: true,
         bullets: [
-          'Liderazgo técnico y operativo de equipo multidisciplinario de +15 personas, coordinando desarrollo, infraestructura y soporte de la PKI nacional.',
-          'Referente técnico principal (soporte N3) de la infraestructura de clave pública: troubleshooting de bajo nivel en sistemas de certificación y criptografía.',
-          'Gestión de proyectos de infraestructura de certificación digital, definición de roadmap técnico y priorización de mejoras.',
+          'Liderazgo técnico y operativo de un equipo de +15 personas.',
+          'Referente técnico principal para la operación, soporte N3 y continuidad de la infraestructura PKI.',
+          'Gestión y seguimiento de proyectos de certificación digital e implementación de integraciones.',
+          'Administrador de la Autoridad Certificante AC ONTI.',
+          'Participación en mesas de intercambio con países de Latinoamérica y organismos internacionales, compartiendo experiencia técnica para la implementación de firma digital.',
+          'Utilización y conocimiento de plataformas del Estado Nacional (GDE y TAD).',
+          'Elaboración de reportes de gestión técnica y respuestas para auditorías internas y externas.'
         ],
-        highlight: 'Migración de HSM — Liderazgo técnico de la migración de 4 equipos HSM en producción (AC ONTI).'
+        highlight: 'Migración de HSM — Liderazgo técnico de la migración de 4 equipos HSM en producción.'
       },
       {
-        title: 'Soporte Técnico y Administrador de AC',
+        title: 'Administrador de Autoridad Certificante y Soporte N3',
         company: 'Secretaría de Innovación, Ciencia y Tecnología de la Nación',
         period: 'Sept 2022',
         periodEnd: 'Ago 2025',
         location: 'CABA',
         current: false,
         bullets: [
-          'Administración y mantenimiento de la Autoridad Certificante ONTI (Windows Server, HSM), garantizando disponibilidad de la infraestructura crítica.',
-          'Diseño y ejecución de consultas SQL Server complejas para auditoría y automatización de reportes periódicos.',
-          'Referente técnico N3: resolución de +1.000 incidentes anuales, debugging de integraciones y problemas de certificación.',
-          'Capacitador oficial en Firma Digital para organismos de la Administración Pública Nacional.',
+          'Administración, soporte y mantenimiento de la AC ONTI.',
+          'Mantenimiento de infraestructura en Windows Server y operación de Hardware Security Modules (HSM).',
+          'Diseño y ejecución de consultas complejas en SQL Server para automatización de reportes operativos.',
+          'Resolución de +1000 incidentes anuales de soporte avanzado Nivel 3.',
+          'Diseño, implementación y mantenimiento de la TSL de la República Argentina.',
+          'Consultoría de referencia a otros países para la implementación de sus propias listas de confianza.',
+          'Definición de requerimientos técnicos y pruebas funcionales del Validador de Firmas (validadordefirmas.gob.ar), utilizado por +2 millones de personas.',
+          'Capacitación en Firma Digital para Autoridades de Registro de todo el país.'
         ],
         highlight: 'TSL Argentina (estándar ETSI TS 119 612) · Validador de Firmas (validadordefirmas.gob.ar — +2M usuarios en 2025).'
       },
@@ -209,8 +218,9 @@ const translations = {
         location: 'CABA',
         current: false,
         bullets: [
-          'Gestión técnica del ciclo de vida de certificados digitales: emisión, renovación, revocación.',
-          'Soporte N1 a suscriptores de la AC ONTI, con resolución de +200 incidentes anuales.',
+          'Gestión de solicitudes de certificados digitales.',
+          'Asistencia técnica y procedimental a suscriptores y Autoridades de Registro.',
+          'Soporte técnico Nivel 1 con resolución de +200 incidentes anuales.'
         ],
         highlight: ''
       },
@@ -222,7 +232,7 @@ const translations = {
         location: 'Chascomús / La Plata',
         current: false,
         bullets: [
-          'Atención al cliente, gestión de pedidos y trabajo en equipo en entornos de alto volumen.',
+          'Atención al cliente, gestión de pedidos y manejo de caja.'
         ],
         highlight: ''
       }
@@ -235,12 +245,22 @@ const translations = {
       {
         category: 'skills.dev',
         icon: 'code',
-        items: ['HTML/CSS', 'JavaScript', 'Node.js', 'Git/GitHub', 'MongoDB', 'SQLite', 'Python', "Flask", 'Express', 'API REST']
+        items: ['JavaScript', 'Node.js', 'HTML', 'CSS', 'Git', 'Spec Driven Development (SDD)', 'APIs REST']
       },
       {
         category: 'skills.infra',
-        icon: 'dns',
-        items: ['JIRA Service Desk', 'Dispositivos criptográficos (HSM, USB tokens)', 'Windows Server', 'SQL Server', 'Administración de servidores',]
+        icon: 'security',
+        items: ['PKI', 'Firma Digital', 'HSM', 'Windows Server', 'TSL', 'Certificados X.509']
+      },
+      {
+        category: 'skills.db',
+        icon: 'database',
+        items: ['SQL Server']
+      },
+      {
+        category: 'skills.mgmt',
+        icon: 'groups',
+        items: ['JIRA Service Desk', 'GDE', 'TAD', 'Documentación técnica', 'Liderazgo de equipos']
       }
     ],
 
@@ -321,7 +341,9 @@ const translations = {
 
     // ---- Skills categories ----
     'skills.dev': 'Development',
-    'skills.infra': 'Infrastructure & Tools',
+    'skills.infra': 'Infrastructure & Security',
+    'skills.db': 'Databases',
+    'skills.mgmt': 'Management',
 
     // ---- Education ----
     'education.degree': "Bachelor's in Computer Science",
@@ -428,7 +450,6 @@ const translations = {
         }
       }
     ],
-
     // ============================================================
     // DATA: Experience (EN)
     // ============================================================
@@ -441,24 +462,32 @@ const translations = {
         location: 'Buenos Aires',
         current: true,
         bullets: [
-          'Technical and operational leadership of a 15+ member multidisciplinary team, coordinating development, infrastructure and support for the national PKI.',
-          'Principal technical reference (L3 support) for public key infrastructure: low-level troubleshooting of certification and cryptography systems.',
-          'Project management for digital certification infrastructure, defining technical roadmap and prioritizing improvements.',
+          'Technical and operational leadership of a +15 member team.',
+          'Principal technical reference for operation, L3 support, and continuity of the PKI infrastructure.',
+          'Management and follow-up of digital certification projects and implementation of integrations.',
+          'Administrator of the AC ONTI Certification Authority.',
+          'Participation in exchange roundtables with Latin American countries and international organizations, sharing technical expertise for digital signature implementation.',
+          'Use and knowledge of National Government platforms (GDE and TAD).',
+          'Preparation of technical management reports and responses to internal and external audits.'
         ],
-        highlight: 'HSM Migration — Technical lead for the migration of 4 production HSM appliances (AC ONTI).'
+        highlight: 'HSM Migration — Technical lead for the migration of 4 production HSM appliances.'
       },
       {
-        title: 'Technical Support & CA Administrator',
+        title: 'Certification Authority Administrator & L3 Support',
         company: 'National Secretariat of Innovation, Science & Technology',
         period: 'Sep 2022',
         periodEnd: 'Aug 2025',
         location: 'Buenos Aires',
         current: false,
         bullets: [
-          'Administration and maintenance of the ONTI Certification Authority (Windows Server, HSM), ensuring critical infrastructure availability.',
-          'Design and execution of complex SQL Server queries for auditing and automated periodic report generation.',
-          'L3 technical reference: resolution of 1,000+ annual incidents, integration debugging and certification troubleshooting.',
-          'Official trainer on Digital Signature for National Public Administration agencies.',
+          'Administration, support, and maintenance of AC ONTI.',
+          'Infrastructure maintenance on Windows Server and Hardware Security Modules (HSM) operation.',
+          'Design and execution of complex SQL Server queries for operational report automation.',
+          'Resolution of 1,000+ L3 advanced support incidents annually.',
+          'Design, implementation, and maintenance of the Trust Service List (TSL) of the Argentine Republic.',
+          'Reference consultancy for other countries in implementing their own trust lists.',
+          'Technical requirements definition and functional testing of the Signature Validator (validadordefirmas.gob.ar), used by +2 million people.',
+          'Digital Signature training for Registration Authorities nationwide.'
         ],
         highlight: 'Argentine TSL (ETSI TS 119 612 standard) · Signature Validator (validadordefirmas.gob.ar — 2M+ users in 2025).'
       },
@@ -470,8 +499,9 @@ const translations = {
         location: 'Buenos Aires',
         current: false,
         bullets: [
-          'Technical management of digital certificate lifecycle: issuance, renewal, revocation.',
-          'L1 support for AC ONTI subscribers, resolving 200+ annual incidents.',
+          'Management of digital certificate requests.',
+          'Technical and procedural assistance to subscribers and Registration Authorities.',
+          'Level 1 technical support with resolution of +200 annual incidents.'
         ],
         highlight: ''
       },
@@ -483,7 +513,7 @@ const translations = {
         location: 'Chascomús / La Plata',
         current: false,
         bullets: [
-          'Customer service, order management and teamwork in high-volume environments.',
+          'Customer service, order management and cash handling.'
         ],
         highlight: ''
       }
@@ -496,12 +526,22 @@ const translations = {
       {
         category: 'skills.dev',
         icon: 'code',
-        items: ['JavaScript', 'Node.js', 'HTML/CSS', 'Git/GitHub', 'MongoDB', 'SQLite', 'Python', "Flask", 'Express', 'API REST']
+        items: ['JavaScript', 'Node.js', 'HTML', 'CSS', 'Git', 'Spec Driven Development (SDD)', 'APIs REST']
       },
       {
         category: 'skills.infra',
-        icon: 'dns',
-        items: ['JIRA Service Desk', 'Cryptographic devices (HSM, USB tokens)', 'Windows Server', 'SQL Server', 'Server administration',]
+        icon: 'security',
+        items: ['PKI', 'Digital Signature', 'HSM', 'Windows Server', 'TSL', 'X.509 Certificates']
+      },
+      {
+        category: 'skills.db',
+        icon: 'database',
+        items: ['SQL Server']
+      },
+      {
+        category: 'skills.mgmt',
+        icon: 'groups',
+        items: ['JIRA Service Desk', 'GDE', 'TAD', 'Technical documentation', 'Team leadership']
       }
     ],
 
