@@ -139,6 +139,13 @@ function initScrollReveal() {
 
 /** Render all dynamic sections (called on init and language change) */
 function renderDynamicSections() {
+  // Update CV download links based on active language
+  const cvLinks = document.querySelectorAll('a[href*="CV_Iseas_Federico.pdf"], a[href*="CV_Federico_Iseas_EN.pdf"]');
+  const cvUrl = currentLang === 'es' ? 'resources/docs/CV_Iseas_Federico.pdf' : 'resources/docs/CV_Federico_Iseas_EN.pdf';
+  cvLinks.forEach(link => {
+    link.setAttribute('href', cvUrl);
+  });
+
   renderProjects();
   renderExperience();
   renderSkills();
