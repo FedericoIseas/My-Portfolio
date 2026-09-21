@@ -118,7 +118,7 @@ const translations = {
         title: 'SignumID (signumID.com.ar)',
         featured: true,
         image: 'resources/img/preview-SignumID.webp',
-        description: 'Plataforma para firma y validación de documentos digitales, con soporte para los estándares eIDAS y la Ley 25.506 argentina. Permite firmar PDFs, XML y documentos Office usando tokens criptográficos USB desde el navegador, y validar la legalidad de firmas existentes (CAdES, PAdES, XAdES, OOXML) verificando cadena de certificación, revocación OCSP/CRL y sellos de tiempo.',
+        description: 'Proyecto personal que combina mi experiencia profesional en PKI con desarrollo fullstack: plataforma de firma y validación de documentos electrónicos con soporte para múltiples estándares (PAdES, CAdES, XAdES), verificación de cadenas de confianza contra TSLs de varios países, chequeo de revocación (OCSP/CRL) y sellado de tiempo.',
         stack: ['React', 'Node.js', 'Express', 'Go', 'SQLite', 'pkijs'],
         highlights: [
           'Arquitectura de 3 capas: SPA React + Backend Node.js/Express + Agente local en Go para acceso a hardware criptográfico (token USB vía PowerShell/Certificate Store de Windows).',
@@ -166,18 +166,6 @@ const translations = {
         highlights: [],
         links: {
           repo: 'https://github.com/FedericoIseas/Facturador-ARCA-DEMO'
-        }
-      },
-      {
-        id: 'gestor-equipos',
-        title: 'Gestor de Equipos',
-        featured: false,
-        image: 'resources/img/preview-gestionApp.webp',
-        description: 'Aplicación web para la gestión interna de equipos de trabajo y asignación de tareas. Permite coordinar miembros, programar entregas y visualizar el estado de proyectos colaborativos en tiempo real.',
-        stack: ['Node.js', 'Express', 'SQLite', 'HTML/CSS'],
-        highlights: [],
-        links: {
-          repo: 'https://github.com/FedericoIseas/GestionAPP-DEMO'
         }
       }
     ],
@@ -426,7 +414,7 @@ const translations = {
         title: 'SignumID (signumID.com.ar)',
         featured: true,
         image: 'resources/img/preview-SignumID.webp',
-        description: 'Platform for signing and validating digital documents, supporting eIDAS standards and Argentine Law 25.506. Enables signing PDFs, XML and Office documents using USB cryptographic tokens from the browser, and validates existing signatures (CAdES, PAdES, XAdES, OOXML) by verifying certification chains, OCSP/CRL revocation and timestamps.',
+        description: 'Personal project combining my professional PKI expertise with fullstack development: a platform for signing and validating electronic documents with support for multiple standards (PAdES, CAdES, XAdES), trust chain verification against TSLs from multiple countries, revocation checking (OCSP/CRL) and timestamping.',
         stack: ['React', 'Node.js', 'Express', 'Go', 'SQLite', 'pkijs'],
         highlights: [
           '3-layer architecture: React SPA + Node.js/Express Backend + Local Agent in Go for cryptographic hardware access (USB token via PowerShell/Windows Certificate Store).',
@@ -474,18 +462,6 @@ const translations = {
         highlights: [],
         links: {
           repo: 'https://github.com/FedericoIseas/Facturador-ARCA-DEMO'
-        }
-      },
-      {
-        id: 'gestor-equipos',
-        title: 'Team Manager',
-        featured: false,
-        image: 'resources/img/preview-gestionApp.webp',
-        description: 'Web application for internal team management and task allocation. Enables coordinating members, scheduling deliverables, and visualizing collaborative project statuses in real time.',
-        stack: ['Node.js', 'Express', 'SQLite', 'HTML/CSS'],
-        highlights: [],
-        links: {
-          repo: 'https://github.com/FedericoIseas/GestionAPP-DEMO'
         }
       }
     ],
