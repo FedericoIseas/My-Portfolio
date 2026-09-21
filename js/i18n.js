@@ -23,8 +23,8 @@ const translations = {
     'nav.lang': 'EN',
 
     // ---- Hero ----
-    'hero.subtitle': 'De la infraestructura crítica al desarrollo backend',
-    'hero.description': 'Trabajo en infraestructura de seguridad crítica para el Estado argentino y desarrollo software por cuenta propia. Busco dar el salto formal a un rol de desarrollo backend, mientras avanzo en la Licenciatura en Informática.',
+    'hero.subtitle': 'Desarrollador fullstack en formación | Especialista en PKI',
+    'hero.description': 'Construyo software seguro y confiable combinando mi experiencia en PKI e infraestructura crítica con desarrollo fullstack. Trabajo con IA agéntica como parte de mi flujo diario. Curso la Licenciatura en Informática en Universidad Siglo 21.',
     'hero.cta.projects': 'Ver proyectos',
     'hero.cta.cv': 'Descargar CV',
     'hero.progress.total': 'Licenciatura en Informática',
@@ -39,7 +39,7 @@ const translations = {
     'section.skills.subtitle': 'Tecnologías y herramientas con las que trabajo',
     'section.formation.title': 'Formación',
     'section.formation.subtitle': 'Educación, certificaciones e idiomas',
-    'section.contact.title': '¿Hablamos?',
+    'section.contact.title': 'Hablemos',
     'section.contact.subtitle': 'Estoy abierto a nuevas oportunidades y colaboraciones. No dudes en contactarme.',
 
     // ---- Formation sub-headings ----
@@ -81,8 +81,8 @@ const translations = {
     'lang.en.speaking': 'Habla: Básico',
 
     // ---- Contact ----
-    'contact.heading': '¿Hablamos?',
-    'contact.text': 'Estoy abierto a nuevas oportunidades y colaboraciones. Si tenés un proyecto interesante o una posición en la que encaje mi perfil, no dudes en contactarme.',
+    'contact.heading': 'Hablemos',
+    'contact.text': 'Estoy abierto a nuevas oportunidades y colaboraciones. Si tenés un proyecto interesante o una posición en la que encaje mi perfil ¡Escribime!.',
     'contact.form.name': 'Nombre',
     'contact.form.email': 'Email',
     'contact.form.message': 'Mensaje',
@@ -119,9 +119,9 @@ const translations = {
         featured: true,
         image: 'resources/img/preview-SignumID.webp',
         description: 'Plataforma para firma y validación de documentos digitales, con soporte para los estándares eIDAS y la Ley 25.506 argentina. Permite firmar PDFs, XML y documentos Office usando tokens criptográficos USB desde el navegador, y validar la legalidad de firmas existentes (CAdES, PAdES, XAdES, OOXML) verificando cadena de certificación, revocación OCSP/CRL y sellos de tiempo.',
-        stack: ['React', 'Node.js', 'Express', 'SQLite', 'pkijs', 'Docker', 'Vercel'],
+        stack: ['React', 'Node.js', 'Express', 'Go', 'SQLite', 'pkijs'],
         highlights: [
-          'Arquitectura de 3 capas: SPA React + Backend Node.js/Express + Agente local para acceso a hardware criptográfico (token USB vía PowerShell/Certificate Store de Windows).',
+          'Arquitectura de 3 capas: SPA React + Backend Node.js/Express + Agente local en Go para acceso a hardware criptográfico (token USB vía PowerShell/Certificate Store de Windows).',
           'Backend con Express 5, SQLite (better-sqlite3), y librerías criptográficas de bajo nivel (pkijs, asn1js, xadesjs) para parseo y verificación de firmas digitales.',
           'Validación multi-formato con patrón Strategy (un validador especializado por estándar: CAdES/PAdES/XAdES/OOXML) orquestados por un servicio central.',
           'Integración con servicios externos: TSA (sellos de tiempo RFC 3161), OCSP/CRL para revocación, y descarga/parseo de TSLs (Trust Service Lists) de 5 países de Latinoamérica.',
@@ -129,6 +129,18 @@ const translations = {
         ],
         links: {
           demo: 'https://signumid.com.ar'
+        }
+      },
+      {
+        id: 'planificador-futbol',
+        title: 'Planificador Táctico de Fútbol',
+        featured: false,
+        image: 'resources/img/preview-Planificador.webp',
+        description: 'Aplicación web interactiva para cuerpos técnicos de fútbol: gestión de plantel, pizarras tácticas vectoriales (SVG) con drag & drop y soporte táctil, y generación de fichas técnicas imprimibles en PDF.',
+        stack: ['React', 'Vite', 'CSS'],
+        highlights: [],
+        links: {
+          repo: 'https://github.com/FedericoIseas/Planificador-tactica-futbol'
         }
       },
       {
@@ -150,7 +162,7 @@ const translations = {
         featured: false,
         image: 'resources/img/preview-BotFacturador.webp',
         description: 'Bot de Telegram para generación automatizada de facturas electrónicas. Integra con los Web Services de AFIP (WSFE) para emisión de comprobantes fiscales válidos, simplificando la facturación para monotributistas y pequeñas empresas.',
-        stack: ['Node.js', 'Telegram (bot)', 'API REST (AFIP SDK)'],
+        stack: ['Node.js', 'Express', 'MongoDB', 'AFIP SDK'],
         highlights: [],
         links: {
           repo: 'https://github.com/FedericoIseas/Facturador-ARCA-DEMO'
@@ -182,10 +194,11 @@ const translations = {
         current: true,
         bullets: [
           'Liderazgo técnico y operativo de un equipo de +15 personas.',
+          'Lideró la migración integral de 4 equipos criptográficos HSM, garantizando la continuidad del servicio.',
           'Referente técnico principal para la operación, soporte N3 y continuidad de la infraestructura PKI.',
           'Gestión y seguimiento de proyectos de certificación digital e implementación de integraciones.',
           'Administrador de la Autoridad Certificante AC ONTI.',
-          'Participación en mesas de intercambio con países de Latinoamérica y organismos internacionales, compartiendo experiencia técnica para la implementación de firma digital.',
+          'Participación regular en mesas de intercambio técnico con países de Latinoamérica y organismos internacionales, impulsando la adopción de la firma digital.',
           'Utilización y conocimiento de plataformas del Estado Nacional (GDE y TAD).',
           'Elaboración de reportes de gestión técnica y respuestas para auditorías internas y externas.'
         ],
@@ -200,6 +213,7 @@ const translations = {
         current: false,
         bullets: [
           'Administración, soporte y mantenimiento de la AC ONTI.',
+          'Referente principal de consulta respecto a la firma digital por hardware.',
           'Mantenimiento de infraestructura en Windows Server y operación de Hardware Security Modules (HSM).',
           'Diseño y ejecución de consultas complejas en SQL Server para automatización de reportes operativos.',
           'Resolución de +1000 incidentes anuales de soporte avanzado Nivel 3.',
@@ -225,6 +239,19 @@ const translations = {
         highlight: ''
       },
       {
+        title: 'Asistente de Desarrollo Freelance',
+        company: 'Colaboración independiente',
+        period: 'Ene 2019',
+        periodEnd: 'Dic 2019',
+        location: 'La Plata',
+        current: false,
+        bullets: [
+          'Desarrollo de funcionalidades puntuales (botones, funciones de interacción) para páginas web de terceros en HTML, CSS y JavaScript.',
+          'Primer acercamiento práctico a la programación web, colaborando con un desarrollador externo.'
+        ],
+        highlight: ''
+      },
+      {
         title: 'Atención al Público',
         company: 'Varias empresas',
         period: 'Ene 2016',
@@ -245,7 +272,7 @@ const translations = {
       {
         category: 'skills.dev',
         icon: 'code',
-        items: ['JavaScript', 'Node.js', 'HTML', 'CSS', 'Git', 'Python', 'Flask', 'Express', 'Spec Driven Development (SDD)', 'APIs REST']
+        items: ['JavaScript', 'React', 'Node.js', 'Go', 'HTML', 'CSS', 'Git', 'APIs REST', 'Desarrollo agéntico con IA']
       },
       {
         category: 'skills.infra',
@@ -255,7 +282,7 @@ const translations = {
       {
         category: 'skills.db',
         icon: 'database',
-        items: ['SQL Server', 'MongoDB']
+        items: ['SQL Server', 'MongoDB', 'SQLite', 'Supabase']
       },
       {
         category: 'skills.mgmt',
@@ -304,8 +331,8 @@ const translations = {
     'nav.lang': 'ES',
 
     // ---- Hero ----
-    'hero.subtitle': 'From critical infrastructure to backend development',
-    'hero.description': 'I work in critical security infrastructure for the Argentine government and develop software independently. I am looking to make the formal leap to a backend development role while pursuing my Bachelor\'s in Computer Science.',
+    'hero.subtitle': 'Fullstack developer in training | PKI Specialist',
+    'hero.description': 'I build secure and reliable software combining my expertise in PKI and critical infrastructure with fullstack development. I use agentic AI as part of my daily workflow. Currently pursuing a Bachelor\'s in Computer Science at Universidad Siglo 21.',
     'hero.cta.projects': 'View projects',
     'hero.cta.cv': 'Download CV',
     'hero.progress.total': "Bachelor's in Computer Science",
@@ -363,7 +390,7 @@ const translations = {
 
     // ---- Contact ----
     'contact.heading': "Let's talk",
-    'contact.text': "I'm open to new opportunities and collaborations. If you have an interesting project or a position that fits my profile, feel free to reach out.",
+    'contact.text': "I'm open to new opportunities and collaborations. If you have an interesting project or a position that fits my profile, feel free to write me.",
     'contact.form.name': 'Name',
     'contact.form.email': 'Email',
     'contact.form.message': 'Message',
@@ -400,9 +427,9 @@ const translations = {
         featured: true,
         image: 'resources/img/preview-SignumID.webp',
         description: 'Platform for signing and validating digital documents, supporting eIDAS standards and Argentine Law 25.506. Enables signing PDFs, XML and Office documents using USB cryptographic tokens from the browser, and validates existing signatures (CAdES, PAdES, XAdES, OOXML) by verifying certification chains, OCSP/CRL revocation and timestamps.',
-        stack: ['React', 'Node.js', 'Express', 'SQLite', 'pkijs', 'Docker', 'Vercel'],
+        stack: ['React', 'Node.js', 'Express', 'Go', 'SQLite', 'pkijs'],
         highlights: [
-          '3-layer architecture: React SPA + Node.js/Express Backend + Local Agent for cryptographic hardware access (USB token via PowerShell/Windows Certificate Store).',
+          '3-layer architecture: React SPA + Node.js/Express Backend + Local Agent in Go for cryptographic hardware access (USB token via PowerShell/Windows Certificate Store).',
           'Backend with Express 5, SQLite (better-sqlite3), and low-level cryptographic libraries (pkijs, asn1js, xadesjs) for parsing and verifying digital signatures.',
           'Multi-format validation using Strategy pattern (one specialized validator per standard: CAdES/PAdES/XAdES/OOXML) orchestrated by a central service.',
           'Integration with external services: TSA (RFC 3161 timestamps), OCSP/CRL for revocation, and download/parsing of TSLs (Trust Service Lists) from 5 Latin American countries.',
@@ -410,6 +437,18 @@ const translations = {
         ],
         links: {
           demo: 'https://signumid.com.ar'
+        }
+      },
+      {
+        id: 'planificador-futbol',
+        title: 'Football Tactical Planner',
+        featured: false,
+        image: 'resources/img/preview-Planificador.webp',
+        description: 'Interactive web application for football coaching staffs: squad management, vector tactical boards (SVG) with drag & drop and touch support, and generation of printable technical reports in PDF.',
+        stack: ['React', 'Vite', 'CSS'],
+        highlights: [],
+        links: {
+          repo: 'https://github.com/FedericoIseas/Planificador-tactica-futbol'
         }
       },
       {
@@ -431,7 +470,7 @@ const translations = {
         featured: false,
         image: 'resources/img/preview-BotFacturador.webp',
         description: 'Telegram bot for automated electronic invoice generation. Integrates with AFIP Web Services (WSFE) for issuing valid tax receipts, simplifying invoicing for freelancers and small businesses.',
-        stack: ['Node.js', 'Telegram (bot)', 'API REST (AFIP SDK)'],
+        stack: ['Node.js', 'Express', 'MongoDB', 'AFIP SDK'],
         highlights: [],
         links: {
           repo: 'https://github.com/FedericoIseas/Facturador-ARCA-DEMO'
@@ -463,10 +502,11 @@ const translations = {
         current: true,
         bullets: [
           'Technical and operational leadership of a +15 member team.',
+          'Led the comprehensive migration of 4 cryptographic HSM appliances, ensuring service continuity.',
           'Principal technical reference for operation, L3 support, and continuity of the PKI infrastructure.',
           'Management and follow-up of digital certification projects and implementation of integrations.',
           'Administrator of the AC ONTI Certification Authority.',
-          'Participation in exchange roundtables with Latin American countries and international organizations, sharing technical expertise for digital signature implementation.',
+          'Regular participation in technical exchange roundtables with Latin American countries and international organizations, driving digital signature adoption in the public and private sectors.',
           'Use and knowledge of National Government platforms (GDE and TAD).',
           'Preparation of technical management reports and responses to internal and external audits.'
         ],
@@ -481,6 +521,7 @@ const translations = {
         current: false,
         bullets: [
           'Administration, support, and maintenance of AC ONTI.',
+          'Principal reference consultant for hardware-based digital signatures.',
           'Infrastructure maintenance on Windows Server and Hardware Security Modules (HSM) operation.',
           'Design and execution of complex SQL Server queries for operational report automation.',
           'Resolution of 1,000+ L3 advanced support incidents annually.',
@@ -506,6 +547,19 @@ const translations = {
         highlight: ''
       },
       {
+        title: 'Freelance Development Assistant',
+        company: 'Independent collaboration',
+        period: 'Jan 2019',
+        periodEnd: 'Dec 2019',
+        location: 'La Plata',
+        current: false,
+        bullets: [
+          'Development of specific features (buttons, interaction functions) for third-party websites in HTML, CSS and JavaScript.',
+          'First hands-on approach to web programming, collaborating with an external developer.'
+        ],
+        highlight: ''
+      },
+      {
         title: 'Customer Service',
         company: 'Various companies',
         period: 'Jan 2016',
@@ -526,7 +580,7 @@ const translations = {
       {
         category: 'skills.dev',
         icon: 'code',
-        items: ['JavaScript', 'Node.js', 'HTML', 'CSS', 'Git', 'Python', 'Flask', 'Express', 'Spec Driven Development (SDD)', 'APIs REST']
+        items: ['JavaScript', 'React', 'Node.js', 'Go', 'HTML', 'CSS', 'Git', 'APIs REST', 'Agentic AI development']
       },
       {
         category: 'skills.infra',
@@ -536,7 +590,7 @@ const translations = {
       {
         category: 'skills.db',
         icon: 'database',
-        items: ['SQL Server', 'MongoDB']
+        items: ['SQL Server', 'MongoDB', 'SQLite', 'Supabase']
       },
       {
         category: 'skills.mgmt',
