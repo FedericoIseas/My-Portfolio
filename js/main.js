@@ -6,6 +6,17 @@
    ============================================================ */
 
 /* ============================================================
+   0. NON-CRITICAL RESOURCE ACTIVATION
+   ============================================================ */
+
+// Activate Material Symbols font (was loaded with media="print" to avoid
+// blocking the initial render; switch to "all" as soon as JS runs).
+(function activateDeferredStylesheets() {
+  const el = document.getElementById('material-symbols-css');
+  if (el) el.media = 'all';
+})();
+
+/* ============================================================
    1. THEME (Dark / Light Mode)
    ============================================================ */
 
@@ -69,13 +80,7 @@ function openMobileMenu() {
   const hamburger = document.getElementById('hamburger');
   const mobileMenu = document.getElementById('mobile-menu');
   hamburger.classList.add('navbar__hamburger--active');
-  mobileMenu.style.display = 'flex';
-  // Force reflow, then add open class for animation
-  requestAnimationFrame(() => {
-    requestAnimationFrame(() => {
-      mobileMenu.classList.add('navbar__mobile-menu--open');
-    });
-  });
+  mobileMenu.classList.add('navbar__mobile-menu--open');
   document.body.style.overflow = 'hidden';
 }
 
@@ -86,11 +91,6 @@ function closeMobileMenu() {
   hamburger.classList.remove('navbar__hamburger--active');
   mobileMenu.classList.remove('navbar__mobile-menu--open');
   document.body.style.overflow = '';
-  setTimeout(() => {
-    if (!mobileMenu.classList.contains('navbar__mobile-menu--open')) {
-      mobileMenu.style.display = '';
-    }
-  }, 300);
 }
 
 /* ============================================================

@@ -17,7 +17,10 @@
 
   <!-- Google Fonts & Material Symbols -->
   <link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700;800&family=JetBrains+Mono:wght@400;500;600&display=swap">
-  <link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Material+Symbols+Rounded:opsz,wght,FILL,GRAD@20..48,100..700,0..1,-50..200&display=block">
+
+  <!-- Non-critical: Material Symbols (icons, loaded async) -->
+  <link rel="stylesheet" media="print" id="material-symbols-css"
+    href="https://fonts.googleapis.com/css2?family=Material+Symbols+Rounded:opsz,wght,FILL,GRAD@20..48,100..700,0..1,-50..200&display=block">
 
   <!-- Styles -->
   <link rel="stylesheet" href="css/styles.css">
@@ -67,28 +70,24 @@
         </button>
       </div>
     </div>
-
-    <!-- Mobile Menu -->
-    <nav class="navbar__mobile-menu" id="mobile-menu" aria-label="Mobile navigation">
-      <a href="index.html#inicio" class="navbar__mobile-link" data-i18n="nav.home">Inicio</a>
-      <a href="index.html#proyectos" class="navbar__mobile-link" data-i18n="nav.projects">Proyectos</a>
-      <a href="index.html#experiencia" class="navbar__mobile-link" data-i18n="nav.experience">Experiencia</a>
-      <a href="index.html#formacion" class="navbar__mobile-link" data-i18n="nav.formation">Formación</a>
-      <a href="index.html#skills" class="navbar__mobile-link" data-i18n="nav.skills">Skills</a>
-      <a href="index.html#contacto" class="navbar__mobile-link" data-i18n="nav.contact">Contacto</a>
-
-      <div class="navbar__mobile-actions">
-        <button class="navbar__lang-btn" id="lang-toggle-mobile" aria-label="Toggle language" data-i18n="nav.lang">EN</button>
-        <button class="navbar__icon-btn" id="theme-toggle-mobile" aria-label="Toggle dark mode">
-          <span class="material-symbols-rounded">dark_mode</span>
-        </button>
-        <a href="resources/docs/CV_Iseas_Federico.pdf" target="_blank" rel="noopener noreferrer" class="btn btn--primary btn--small">
-          <span class="material-symbols-rounded">download</span>
-          <span data-i18n="nav.cv">Descargar CV</span>
-        </a>
-      </div>
-    </nav>
   </header>
+
+  <!-- Mobile Menu (outside header so position:fixed works correctly) -->
+  <nav class="navbar__mobile-menu" id="mobile-menu" aria-label="Mobile navigation">
+    <div class="navbar__mobile-actions">
+      <a href="resources/docs/CV_Iseas_Federico.pdf" target="_blank" rel="noopener noreferrer" class="btn btn--primary btn--small">
+        <span class="material-symbols-rounded">download</span>
+        <span data-i18n="nav.cv">Descargar CV</span>
+      </a>
+    </div>
+
+    <a href="index.html#inicio" class="navbar__mobile-link" data-i18n="nav.home">Inicio</a>
+    <a href="index.html#proyectos" class="navbar__mobile-link" data-i18n="nav.projects">Proyectos</a>
+    <a href="index.html#experiencia" class="navbar__mobile-link" data-i18n="nav.experience">Experiencia</a>
+    <a href="index.html#formacion" class="navbar__mobile-link" data-i18n="nav.formation">Formación</a>
+    <a href="index.html#skills" class="navbar__mobile-link" data-i18n="nav.skills">Skills</a>
+    <a href="index.html#contacto" class="navbar__mobile-link" data-i18n="nav.contact">Contacto</a>
+  </nav>
 
   <!-- ============================================================
        CONTENT
@@ -125,9 +124,9 @@
     </div>
   </footer>
 
-  <!-- Scripts -->
-  <script src="js/materias.js"></script>
-  <script src="js/i18n.js"></script>
-  <script src="js/main.js"></script>
+  <!-- Scripts (defer = download in parallel, execute after HTML is parsed) -->
+  <script src="js/materias.js" defer></script>
+  <script src="js/i18n.js" defer></script>
+  <script src="js/main.js" defer></script>
 </body>
 </html>
