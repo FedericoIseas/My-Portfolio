@@ -126,7 +126,11 @@ const planEstudios = [
       {
         nameES: "Estadística y Probabilidad",
         nameEN: "Statistics and Probability",
-        status: "in_progress"
+        status: "approved",
+        grade: 7,
+        type: "promotion",
+        summaryES: "Estadística descriptiva, distribuciones de frecuencia, probabilidad axiomática, probabilidad condicional, teorema de Bayes, variables aleatorias discretas y continuas, distribuciones de probabilidad, teorema del límite central, estimación puntual y por intervalos, pruebas de hipótesis, análisis de varianza (ANOVA) y regresión lineal y no lineal.",
+        summaryEN: "Descriptive statistics, frequency distributions, axiomatic probability, conditional probability, Bayes' theorem, discrete and continuous random variables, probability distributions, central limit theorem, point and interval estimation, hypothesis testing, analysis of variance (ANOVA), and linear and nonlinear regression."
       },
       {
         nameES: "Idioma Extranjero III",
@@ -416,7 +420,7 @@ function getPlanStatistics() {
     }
   });
 
-  return { 
+  return {
     total, approved, inProgress, pending,
     interTotal, interApproved, interInProgress, interPending
   };
