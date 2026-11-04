@@ -23,8 +23,8 @@ const translations = {
     'nav.lang': 'EN',
 
     // ---- Hero ----
-    'hero.subtitle': 'Desarrollador fullstack en formación | Especialista en PKI',
-    'hero.description': 'Construyo software seguro y confiable combinando mi experiencia en PKI e infraestructura crítica con desarrollo fullstack. Trabajo con IA agéntica como parte de mi flujo diario. Curso la Licenciatura en Informática en Universidad Siglo 21.',
+    'hero.subtitle': 'Desarrollador Backend | Especialista en PKI',
+    'hero.description': 'Construyo software robusto, seguro y escalable combinando mi experiencia en PKI e infraestructura crítica con desarrollo backend. Trabajo con IA agéntica como parte de mi flujo diario. Curso la Licenciatura en Informática en Universidad Siglo 21.',
     'hero.cta.projects': 'Ver proyectos',
     'hero.cta.cv': 'Descargar CV',
     'hero.progress.total': 'Licenciatura en Informática',
@@ -32,7 +32,7 @@ const translations = {
 
     // ---- Section titles ----
     'section.projects.title': 'Proyectos',
-    'section.projects.subtitle': 'Soluciones que diseñé y construí de punta a punta',
+    'section.projects.subtitle': 'Servicios, APIs y aplicaciones que diseñé y construí',
     'section.experience.title': 'Experiencia',
     'section.experience.subtitle': 'Trayectoria profesional en tecnología e infraestructura crítica',
     'section.skills.title': 'Skills',
@@ -59,7 +59,7 @@ const translations = {
     'experience.highlight': 'Proyecto destacado',
 
     // ---- Skills categories ----
-    'skills.dev': 'Desarrollo',
+    'skills.dev': 'Desarrollo Backend',
     'skills.infra': 'Infraestructura y seguridad',
     'skills.db': 'Bases de datos',
     'skills.mgmt': 'Gestión',
@@ -82,7 +82,7 @@ const translations = {
 
     // ---- Contact ----
     'contact.heading': 'Hablemos',
-    'contact.text': 'Estoy abierto a nuevas oportunidades y colaboraciones. Si tenés un proyecto interesante o una posición en la que encaje mi perfil ¡Escribime!.',
+    'contact.text': 'Estoy abierto a nuevas oportunidades y desafíos técnicos. Si tenés una búsqueda para un rol Backend o un proyecto desafiante, ¡escribime!',
     'contact.form.name': 'Nombre',
     'contact.form.email': 'Email',
     'contact.form.message': 'Mensaje',
@@ -118,42 +118,17 @@ const translations = {
         title: 'SignumID (signumID.com.ar)',
         featured: true,
         image: 'resources/img/preview-SignumID.webp',
-        description: 'Proyecto personal que combina mi experiencia profesional en PKI con desarrollo fullstack: plataforma de firma y validación de documentos electrónicos con soporte para múltiples estándares (PAdES, CAdES, XAdES), verificación de cadenas de confianza contra TSLs de varios países, chequeo de revocación (OCSP/CRL) y sellado de tiempo.',
-        stack: ['React', 'Node.js', 'Express', 'Go', 'SQLite', 'pkijs'],
+        description: 'Plataforma de alta seguridad para firma y validación de documentos electrónicos. Combina una arquitectura backend en Node.js/Express con un micro-agente local en Go para interacción criptográfica por hardware (tokens USB/HSM), validación multi-estándar (PAdES, CAdES, XAdES), verificación de cadenas de confianza contra TSLs de múltiples países, chequeo de revocación (OCSP/CRL) y sellado de tiempo.',
+        stack: ['Node.js', 'Express', 'Go', 'SQLite', 'pkijs', 'React'],
         highlights: [
-          'Arquitectura de 3 capas: SPA React + Backend Node.js/Express + Agente local en Go para acceso a hardware criptográfico (token USB vía PowerShell/Certificate Store de Windows).',
-          'Backend con Express 5, SQLite (better-sqlite3), y librerías criptográficas de bajo nivel (pkijs, asn1js, xadesjs) para parseo y verificación de firmas digitales.',
-          'Validación multi-formato con patrón Strategy (un validador especializado por estándar: CAdES/PAdES/XAdES/OOXML) orquestados por un servicio central.',
-          'Integración con servicios externos: TSA (sellos de tiempo RFC 3161), OCSP/CRL para revocación, y descarga/parseo de TSLs (Trust Service Lists) de 5 países de Latinoamérica.',
-          'Seguridad: rate limiting, Helmet, whitelist de dominios, procesamiento de archivos en memoria (sin almacenamiento persistente de documentos).',
+          'Arquitectura de 3 capas orientada a seguridad: Backend Node.js/Express + Agente local en Go para acceso a hardware criptográfico (token USB vía PowerShell/Certificate Store de Windows) + SPA en React.',
+          'Backend con Express 5, SQLite (better-sqlite3) y librerías criptográficas de bajo nivel (pkijs, asn1js, xadesjs) para parseo y verificación de firmas digitales.',
+          'Validación multi-formato con patrón Strategy (validador desacoplado por estándar: CAdES/PAdES/XAdES/OOXML) orquestados por un servicio central.',
+          'Integración con servicios externos de confianza: TSA (sellos de tiempo RFC 3161), OCSP/CRL para revocación y descarga/parseo de TSLs (Trust Service Lists) de 5 países de Latinoamérica.',
+          'Diseño seguro: rate limiting, Helmet, whitelist de dominios y procesamiento de archivos en memoria (sin almacenamiento persistente de documentos).',
         ],
         links: {
           demo: 'https://signumid.com.ar'
-        }
-      },
-      {
-        id: 'planificador-futbol',
-        title: 'Planificador Táctico de Fútbol',
-        featured: false,
-        image: 'resources/img/preview-Planificador.webp',
-        description: 'Aplicación web interactiva para cuerpos técnicos de fútbol: gestión de plantel, pizarras tácticas vectoriales (SVG) con drag & drop y soporte táctil, y generación de fichas técnicas imprimibles en PDF.',
-        stack: ['React', 'Vite', 'CSS'],
-        highlights: [],
-        links: {
-          repo: 'https://github.com/FedericoIseas/Planificador-tactica-futbol'
-        }
-      },
-      {
-        id: 'cuit-generator',
-        title: 'Generador de CUITs',
-        featured: false,
-        image: 'resources/img/preview-CuitGenerator.webp',
-        description: 'Herramienta web para generación y validación de CUITs/CUILs argentinos. Implementa el algoritmo oficial de cálculo del dígito verificador con soporte para personas físicas y jurídicas, ideal para pruebas en sistemas de facturación y administración tributaria.',
-        stack: ['JavaScript', 'HTML', 'CSS'],
-        highlights: [],
-        links: {
-          demo: 'https://federicoiseas.github.io/CUITGenerator/',
-          repo: 'https://github.com/FedericoIseas/CUITGenerator'
         }
       },
       {
@@ -161,11 +136,40 @@ const translations = {
         title: 'Bot Facturador',
         featured: false,
         image: 'resources/img/preview-BotFacturador.webp',
-        description: 'Bot de Telegram para generación automatizada de facturas electrónicas. Integra con los Web Services de AFIP (WSFE) para emisión de comprobantes fiscales válidos, simplificando la facturación para monotributistas y pequeñas empresas.',
-        stack: ['Node.js', 'Express', 'MongoDB', 'AFIP SDK'],
-        highlights: [],
+        description: 'Servicio backend y bot de Telegram para la automatización de facturación electrónica. Consume e interactúa con los Web Services de AFIP/ARCA (WSFE) para la emisión y validación de comprobantes fiscales con persistencia en MongoDB.',
+        stack: ['Node.js', 'Express', 'MongoDB', 'AFIP SDK', 'Telegram Bot API'],
+        highlights: [
+          'Integración con Web Services SOAP/REST de AFIP/ARCA para autenticación y facturación electrónica.',
+          'Gestión de estados y comandos conversacionales a través de la API de Telegram.',
+          'Persistencia de transacciones, historial de emisión y clientes en base de datos MongoDB.'
+        ],
         links: {
           repo: 'https://github.com/FedericoIseas/Facturador-ARCA-DEMO'
+        }
+      },
+      {
+        id: 'cuit-generator',
+        title: 'Generador de CUITs',
+        featured: false,
+        image: 'resources/img/preview-CuitGenerator.webp',
+        description: 'Módulo y herramienta para generación y validación algorítmica de CUITs/CUILs argentinos. Implementa la lógica de verificación oficial Módulo 11 para personas físicas y jurídicas, optimizado para testing e integración en sistemas tributarios.',
+        stack: ['JavaScript', 'Algoritmos', 'HTML', 'CSS'],
+        highlights: [],
+        links: {
+          demo: 'https://federicoiseas.github.io/CUITGenerator/',
+          repo: 'https://github.com/FedericoIseas/CUITGenerator'
+        }
+      },
+      {
+        id: 'planificador-futbol',
+        title: 'Planificador Táctico de Fútbol',
+        featured: false,
+        image: 'resources/img/preview-Planificador.webp',
+        description: 'Aplicación interactiva para cuerpos técnicos de fútbol: gestión y modelado de datos de planteles deportivos, pizarras tácticas vectoriales (SVG) con drag & drop y generación automatizada de informes técnicos en PDF.',
+        stack: ['JavaScript', 'React', 'Vite', 'CSS'],
+        highlights: [],
+        links: {
+          repo: 'https://github.com/FedericoIseas/Planificador-tactica-futbol'
         }
       }
     ],
@@ -260,7 +264,7 @@ const translations = {
       {
         category: 'skills.dev',
         icon: 'code',
-        items: ['JavaScript', 'React', 'Node.js', 'Go', 'HTML', 'CSS', 'Git', 'APIs REST', 'Desarrollo agéntico con IA']
+        items: ['Node.js', 'Express', 'Go', 'JavaScript', 'APIs REST', 'Arquitectura de software', 'Git', 'Desarrollo agéntico con IA']
       },
       {
         category: 'skills.infra',
@@ -319,8 +323,8 @@ const translations = {
     'nav.lang': 'ES',
 
     // ---- Hero ----
-    'hero.subtitle': 'Fullstack developer in training | PKI Specialist',
-    'hero.description': 'I build secure and reliable software combining my expertise in PKI and critical infrastructure with fullstack development. I use agentic AI as part of my daily workflow. Currently pursuing a Bachelor\'s in Computer Science at Universidad Siglo 21.',
+    'hero.subtitle': 'Backend Developer | PKI Specialist',
+    'hero.description': 'I build robust, secure, and scalable software combining my expertise in PKI and critical infrastructure with backend development. I use agentic AI as part of my daily workflow. Currently pursuing a Bachelor\'s in Computer Science at Universidad Siglo 21.',
     'hero.cta.projects': 'View projects',
     'hero.cta.cv': 'Download CV',
     'hero.progress.total': "Bachelor's in Computer Science",
@@ -328,7 +332,7 @@ const translations = {
 
     // ---- Section titles ----
     'section.projects.title': 'Projects',
-    'section.projects.subtitle': 'Solutions I designed and built end to end',
+    'section.projects.subtitle': 'Services, APIs, and applications I designed and built',
     'section.experience.title': 'Experience',
     'section.experience.subtitle': 'Professional background in technology and critical infrastructure',
     'section.skills.title': 'Skills',
@@ -355,7 +359,7 @@ const translations = {
     'experience.highlight': 'Highlight',
 
     // ---- Skills categories ----
-    'skills.dev': 'Development',
+    'skills.dev': 'Backend Development',
     'skills.infra': 'Infrastructure & Security',
     'skills.db': 'Databases',
     'skills.mgmt': 'Management',
@@ -378,7 +382,7 @@ const translations = {
 
     // ---- Contact ----
     'contact.heading': "Let's talk",
-    'contact.text': "I'm open to new opportunities and collaborations. If you have an interesting project or a position that fits my profile, feel free to write me.",
+    'contact.text': "I'm open to new opportunities and technical challenges. If you're hiring for a Backend role or have an exciting project, feel free to reach out!",
     'contact.form.name': 'Name',
     'contact.form.email': 'Email',
     'contact.form.message': 'Message',
@@ -414,42 +418,17 @@ const translations = {
         title: 'SignumID (signumID.com.ar)',
         featured: true,
         image: 'resources/img/preview-SignumID.webp',
-        description: 'Personal project combining my professional PKI expertise with fullstack development: a platform for signing and validating electronic documents with support for multiple standards (PAdES, CAdES, XAdES), trust chain verification against TSLs from multiple countries, revocation checking (OCSP/CRL) and timestamping.',
-        stack: ['React', 'Node.js', 'Express', 'Go', 'SQLite', 'pkijs'],
+        description: 'High-security platform for electronic document signing and validation. Combines a Node.js/Express backend architecture with a local Go micro-agent for cryptographic hardware interaction (USB tokens/HSM), multi-standard validation (PAdES, CAdES, XAdES), trust chain verification against international TSLs, revocation checking (OCSP/CRL), and timestamping.',
+        stack: ['Node.js', 'Express', 'Go', 'SQLite', 'pkijs', 'React'],
         highlights: [
-          '3-layer architecture: React SPA + Node.js/Express Backend + Local Agent in Go for cryptographic hardware access (USB token via PowerShell/Windows Certificate Store).',
-          'Backend with Express 5, SQLite (better-sqlite3), and low-level cryptographic libraries (pkijs, asn1js, xadesjs) for parsing and verifying digital signatures.',
-          'Multi-format validation using Strategy pattern (one specialized validator per standard: CAdES/PAdES/XAdES/OOXML) orchestrated by a central service.',
-          'Integration with external services: TSA (RFC 3161 timestamps), OCSP/CRL for revocation, and download/parsing of TSLs (Trust Service Lists) from 5 Latin American countries.',
-          'Security: rate limiting, Helmet, domain whitelist, in-memory file processing (no persistent document storage).',
+          'Security-oriented 3-layer architecture: Node.js/Express Backend + Local Go agent for cryptographic hardware access (USB token via PowerShell/Windows Certificate Store) + React SPA.',
+          'Backend built with Express 5, SQLite (better-sqlite3), and low-level cryptographic libraries (pkijs, asn1js, xadesjs) for parsing and verifying digital signatures.',
+          'Multi-format validation implementing the Strategy pattern (decoupled validator per standard: CAdES/PAdES/XAdES/OOXML) orchestrated by a central service.',
+          'Integration with external trust services: TSA (RFC 3161 timestamps), OCSP/CRL for revocation, and download/parsing of TSLs (Trust Service Lists) from 5 Latin American countries.',
+          'Secure design: rate limiting, Helmet, domain whitelist, and in-memory file processing (no persistent document storage).',
         ],
         links: {
           demo: 'https://signumid.com.ar'
-        }
-      },
-      {
-        id: 'planificador-futbol',
-        title: 'Football Tactical Planner',
-        featured: false,
-        image: 'resources/img/preview-Planificador.webp',
-        description: 'Interactive web application for football coaching staffs: squad management, vector tactical boards (SVG) with drag & drop and touch support, and generation of printable technical reports in PDF.',
-        stack: ['React', 'Vite', 'CSS'],
-        highlights: [],
-        links: {
-          repo: 'https://github.com/FedericoIseas/Planificador-tactica-futbol'
-        }
-      },
-      {
-        id: 'cuit-generator',
-        title: 'CUIT Generator',
-        featured: false,
-        image: 'resources/img/preview-CuitGenerator.webp',
-        description: 'Web tool for generating and validating Argentine CUITs/CUILs (tax IDs). Implements the official check-digit algorithm with support for individuals and legal entities, ideal for testing billing and tax administration systems.',
-        stack: ['JavaScript', 'HTML', 'CSS'],
-        highlights: [],
-        links: {
-          demo: 'https://federicoiseas.github.io/CUITGenerator/',
-          repo: 'https://github.com/FedericoIseas/CUITGenerator'
         }
       },
       {
@@ -457,11 +436,40 @@ const translations = {
         title: 'Invoice Bot',
         featured: false,
         image: 'resources/img/preview-BotFacturador.webp',
-        description: 'Telegram bot for automated electronic invoice generation. Integrates with AFIP Web Services (WSFE) for issuing valid tax receipts, simplifying invoicing for freelancers and small businesses.',
-        stack: ['Node.js', 'Express', 'MongoDB', 'AFIP SDK'],
-        highlights: [],
+        description: 'Backend service and Telegram bot for automated electronic invoice generation. Integrates with AFIP/ARCA Web Services (WSFE) for issuing and validating fiscal receipts, with persistence in MongoDB.',
+        stack: ['Node.js', 'Express', 'MongoDB', 'AFIP SDK', 'Telegram Bot API'],
+        highlights: [
+          'Integration with AFIP/ARCA SOAP/REST Web Services for authentication and electronic invoicing.',
+          'Conversational command and state management via the Telegram Bot API.',
+          'Persistence of transactions, issuance history, and clients in MongoDB.'
+        ],
         links: {
           repo: 'https://github.com/FedericoIseas/Facturador-ARCA-DEMO'
+        }
+      },
+      {
+        id: 'cuit-generator',
+        title: 'CUIT Generator',
+        featured: false,
+        image: 'resources/img/preview-CuitGenerator.webp',
+        description: 'Logic module and tool for calculating and validating Argentine tax IDs (CUIT/CUIL). Implements the official Modulo 11 check-digit verification algorithm for individuals and corporate entities, useful for billing system integration and testing.',
+        stack: ['JavaScript', 'Algorithms', 'HTML', 'CSS'],
+        highlights: [],
+        links: {
+          demo: 'https://federicoiseas.github.io/CUITGenerator/',
+          repo: 'https://github.com/FedericoIseas/CUITGenerator'
+        }
+      },
+      {
+        id: 'planificador-futbol',
+        title: 'Football Tactical Planner',
+        featured: false,
+        image: 'resources/img/preview-Planificador.webp',
+        description: 'Interactive application for coaching staffs: squad data modeling and management, vector tactical boards (SVG) with drag & drop, and automated technical report generation in PDF.',
+        stack: ['JavaScript', 'React', 'Vite', 'CSS'],
+        highlights: [],
+        links: {
+          repo: 'https://github.com/FedericoIseas/Planificador-tactica-futbol'
         }
       }
     ],
@@ -556,7 +564,7 @@ const translations = {
       {
         category: 'skills.dev',
         icon: 'code',
-        items: ['JavaScript', 'React', 'Node.js', 'Go', 'HTML', 'CSS', 'Git', 'APIs REST', 'Agentic AI development']
+        items: ['Node.js', 'Express', 'Go', 'JavaScript', 'REST APIs', 'Software Architecture', 'Git', 'Agentic AI development']
       },
       {
         category: 'skills.infra',
