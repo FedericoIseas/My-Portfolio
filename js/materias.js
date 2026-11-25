@@ -100,7 +100,11 @@ const planEstudios = [
       {
         nameES: "Programación Orientada a Objetos",
         nameEN: "Object Oriented Programming",
-        status: "in_progress"
+        status: "approved",
+        grade: 9,
+        type: "promotion",
+        summaryES: "Paradigma orientado a objetos, lenguaje Java, clases, objetos, encapsulamiento, abstracción, herencia, polimorfismo, sobrecarga y redefinición de métodos, clases abstractas, interfaces, colecciones (ArrayList), manejo de excepciones y manipulación de archivos.",
+        summaryEN: "Object-oriented paradigm, Java language, classes, objects, encapsulation, abstraction, inheritance, polymorphism, method overloading and overriding, abstract classes, interfaces, collections (ArrayList), exception handling, and file manipulation."
       }
     ]
   },
@@ -176,7 +180,11 @@ const planEstudios = [
       {
         nameES: "Bases de Datos I",
         nameEN: "Databases I",
-        status: "in_progress"
+        status: "approved",
+        grade: 9,
+        type: "promotion",
+        summaryES: "Modelo relacional, álgebra relacional, modelo entidad-relación, diseño de bases de datos relacionales, normalización, formas normales, lenguaje SQL (DDL, DML y DCL), restricciones de integridad, tablas, vistas, secuencias, índices, y programación procedimental con PL/SQL (cursores y manejo de excepciones).",
+        summaryEN: "Relational model, relational algebra, entity-relationship modeling, relational database design, normalization, normal forms, SQL language (DDL, DML, and DCL), integrity constraints, tables, views, sequences, indexes, and procedural programming with PL/SQL (cursors and exception handling)."
       },
       {
         nameES: "Idioma Extranjero IV",
